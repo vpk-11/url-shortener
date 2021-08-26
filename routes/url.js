@@ -3,6 +3,7 @@ const router = express.Router();
 const validUrl = require('valid-url');
 const shortid = require('shortid');
 const config = require('config');
+const path = require('path');
 
 const Url = require('../models/Url');
 
@@ -13,8 +14,8 @@ router.get('/shorten',(req,res) => {
 // @route     POST /api/url/shorten
 // @desc      Create short URL
 router.post('/shorten', async (req, res) => {
+        console.log(req.params.body);
 
-    console.log(req.params.body);
 
   const { longUrl } = req.body;
   const baseUrl = config.get('baseUrl');

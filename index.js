@@ -1,5 +1,6 @@
 const express = require('express');
 const connectDB = require('./config/db');
+const path = require('path');
 
 const app = express();
 
@@ -7,7 +8,7 @@ const app = express();
 connectDB();
 
 app.use(express.json());
-
+app.use("/public", express.static(path.join(__dirname, "static")));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Define Routes
