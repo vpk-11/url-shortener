@@ -5,7 +5,10 @@ const shortid = require('shortid');
 const config = require('config');
 const path = require('path');
 
-const Url = require('../models/Url');
+/*
+const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+const Url = require('../models/Url'); */
 
 router.get('/shorten',(req,res) => {
     res.sendFile('/Users/vpkaushik11/Desktop/Programming/Web-Dev/Delta Tasks/On-Site /URL Shortener/public/home.html');
