@@ -13,9 +13,8 @@ router.get('/shorten',(req,res) => {
 // @route     POST /api/url/shorten
 // @desc      Create short URL
 router.post('/shorten', async (req, res) => {
-    if(req.params.code){
-        console.log(req.params.code);
-    }
+
+    console.log(req.params.body);
 
   const { longUrl } = req.body;
   const baseUrl = config.get('baseUrl');
