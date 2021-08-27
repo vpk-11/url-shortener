@@ -16,7 +16,7 @@ router.get('/:code', async (req, res) => {
     }
   } catch (err) {
     console.error(err);
-    res.status(500).json('Server error');
+    res.status(500).json('Server error1');
   }
 });
 

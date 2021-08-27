@@ -4,11 +4,12 @@ const validUrl = require('valid-url');
 const shortid = require('shortid');
 const config = require('config');
 const path = require('path');
+const bodyParser = require('body-parser');
 
 /*
 const app = express();
-app.use(bodyParser.urlencoded({ extended: true }));
-const Url = require('../models/Url'); */
+app.use(bodyParser.urlencoded({ extended: true }));*/
+const Url = require('../models/Url');
 
 router.get('/shorten',(req,res) => {
     res.sendFile('/Users/vpkaushik11/Desktop/Programming/Web-Dev/Delta Tasks/On-Site /URL Shortener/public/home.html');
@@ -17,7 +18,7 @@ router.get('/shorten',(req,res) => {
 // @route     POST /api/url/shorten
 // @desc      Create short URL
 router.post('/shorten', async (req, res) => {
-        console.log(req.params.body);
+        console.log(req.body);
 
 
   const { longUrl } = req.body;
@@ -54,7 +55,7 @@ router.post('/shorten', async (req, res) => {
       }
     } catch (err) {
       console.error(err);
-      res.status(500).json('Server error');
+      res.status(500).json('Server error2');
     }
   } else {
     res.status(401).json('Invalid long url');
