@@ -1,0 +1,893 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "url_shorten_flow",
+        "label": "URL Shortening Request Flow",
+        "nodes": [
+          "public_home_form",
+          "routes_url_postshorten",
+          "models_url_urlmodel"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "routes/url.js"
+      },
+      {
+        "id": "url_redirect_flow",
+        "label": "URL Redirect Lookup Flow",
+        "nodes": [
+          "routes_index_redirecthandler",
+          "models_url_urlmodel",
+          "url_shortener_service"
+        ],
+        "relation": "implement",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "routes/index.js"
+      },
+      {
+        "id": "app_bootstrap_flow",
+        "label": "Application Bootstrap and DB Connection",
+        "nodes": [
+          "index_app",
+          "config_db_connectdb",
+          "models_url_urlmodel"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.75,
+        "source_file": "index.js"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L1",
+      "id": "index_js",
+      "community": 4,
+      "norm_label": "index.js"
+    },
+    {
+      "label": "express",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L1",
+      "id": "url_shortner_index_express",
+      "community": 4,
+      "norm_label": "express"
+    },
+    {
+      "label": "connectDB",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L2",
+      "id": "url_shortner_index_connectdb",
+      "community": 4,
+      "norm_label": "connectdb"
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L3",
+      "id": "url_shortner_index_path",
+      "community": 4,
+      "norm_label": "path"
+    },
+    {
+      "label": "bodyParser",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L4",
+      "id": "url_shortner_index_bodyparser",
+      "community": 4,
+      "norm_label": "bodyparser"
+    },
+    {
+      "label": "app",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L6",
+      "id": "url_shortner_index_app",
+      "community": 4,
+      "norm_label": "app"
+    },
+    {
+      "label": "db.js",
+      "file_type": "code",
+      "source_file": "config/db.js",
+      "source_location": "L1",
+      "id": "config_db_js",
+      "community": 2,
+      "norm_label": "db.js"
+    },
+    {
+      "label": "mongoose",
+      "file_type": "code",
+      "source_file": "config/db.js",
+      "source_location": "L1",
+      "id": "config_db_mongoose",
+      "community": 2,
+      "norm_label": "mongoose"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "config/db.js",
+      "source_location": "L2",
+      "id": "config_db_config",
+      "community": 2,
+      "norm_label": "config"
+    },
+    {
+      "label": "{ copyFileSync }",
+      "file_type": "code",
+      "source_file": "config/db.js",
+      "source_location": "L3",
+      "id": "config_db_copyfilesync",
+      "community": 2,
+      "norm_label": "{ copyfilesync }"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "config/db.js",
+      "source_location": "L4",
+      "id": "config_db_db",
+      "community": 2,
+      "norm_label": "db"
+    },
+    {
+      "label": "connectDB()",
+      "file_type": "code",
+      "source_file": "config/db.js",
+      "source_location": "L6",
+      "id": "config_db_connectdb",
+      "community": 2,
+      "norm_label": "connectdb()"
+    },
+    {
+      "label": "url.js",
+      "file_type": "code",
+      "source_file": "models/url.js",
+      "source_location": "L1",
+      "id": "models_url_js",
+      "community": 3,
+      "norm_label": "url.js"
+    },
+    {
+      "label": "mongoose",
+      "file_type": "code",
+      "source_file": "models/url.js",
+      "source_location": "L1",
+      "id": "models_url_mongoose",
+      "community": 3,
+      "norm_label": "mongoose"
+    },
+    {
+      "label": "urlSchema",
+      "file_type": "code",
+      "source_file": "models/url.js",
+      "source_location": "L3",
+      "id": "models_url_urlschema",
+      "community": 3,
+      "norm_label": "urlschema"
+    },
+    {
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "routes/index.js",
+      "source_location": "L1",
+      "id": "routes_index_js",
+      "community": 3,
+      "norm_label": "index.js"
+    },
+    {
+      "label": "express",
+      "file_type": "code",
+      "source_file": "routes/index.js",
+      "source_location": "L1",
+      "id": "routes_index_express",
+      "community": 3,
+      "norm_label": "express"
+    },
+    {
+      "label": "router",
+      "file_type": "code",
+      "source_file": "routes/index.js",
+      "source_location": "L2",
+      "id": "routes_index_router",
+      "community": 3,
+      "norm_label": "router"
+    },
+    {
+      "label": "Url",
+      "file_type": "code",
+      "source_file": "routes/index.js",
+      "source_location": "L4",
+      "id": "routes_index_url",
+      "community": 3,
+      "norm_label": "url"
+    },
+    {
+      "label": "url.js",
+      "file_type": "code",
+      "source_file": "routes/url.js",
+      "source_location": "L1",
+      "id": "routes_url_js",
+      "community": 0,
+      "norm_label": "url.js"
+    },
+    {
+      "label": "express",
+      "file_type": "code",
+      "source_file": "routes/url.js",
+      "source_location": "L1",
+      "id": "routes_url_express",
+      "community": 0,
+      "norm_label": "express"
+    },
+    {
+      "label": "router",
+      "file_type": "code",
+      "source_file": "routes/url.js",
+      "source_location": "L2",
+      "id": "routes_url_router",
+      "community": 0,
+      "norm_label": "router"
+    },
+    {
+      "label": "validUrl",
+      "file_type": "code",
+      "source_file": "routes/url.js",
+      "source_location": "L3",
+      "id": "routes_url_validurl",
+      "community": 0,
+      "norm_label": "validurl"
+    },
+    {
+      "label": "shortid",
+      "file_type": "code",
+      "source_file": "routes/url.js",
+      "source_location": "L4",
+      "id": "routes_url_shortid",
+      "community": 0,
+      "norm_label": "shortid"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "routes/url.js",
+      "source_location": "L5",
+      "id": "routes_url_config",
+      "community": 0,
+      "norm_label": "config"
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": "routes/url.js",
+      "source_location": "L6",
+      "id": "routes_url_path",
+      "community": 0,
+      "norm_label": "path"
+    },
+    {
+      "label": "bodyParser",
+      "file_type": "code",
+      "source_file": "routes/url.js",
+      "source_location": "L7",
+      "id": "routes_url_bodyparser",
+      "community": 0,
+      "norm_label": "bodyparser"
+    },
+    {
+      "label": "Url",
+      "file_type": "code",
+      "source_file": "routes/url.js",
+      "source_location": "L12",
+      "id": "routes_url_url",
+      "community": 0,
+      "norm_label": "url"
+    },
+    {
+      "label": "baseUrl",
+      "file_type": "code",
+      "source_file": "routes/url.js",
+      "source_location": "L25",
+      "id": "routes_url_baseurl",
+      "community": 0,
+      "norm_label": "baseurl"
+    },
+    {
+      "label": "urlCode",
+      "file_type": "code",
+      "source_file": "routes/url.js",
+      "source_location": "L33",
+      "id": "routes_url_urlcode",
+      "community": 0,
+      "norm_label": "urlcode"
+    },
+    {
+      "label": "Express App Entry Point",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "1-21",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "index_app",
+      "community": 2,
+      "norm_label": "express app entry point"
+    },
+    {
+      "label": "Url Mongoose Model",
+      "file_type": "code",
+      "source_file": "models/url.js",
+      "source_location": "10",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "models_url_urlmodel",
+      "community": 1,
+      "norm_label": "url mongoose model"
+    },
+    {
+      "label": "GET /:code Redirect Handler",
+      "file_type": "code",
+      "source_file": "routes/index.js",
+      "source_location": "8-21",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "routes_index_redirecthandler",
+      "community": 1,
+      "norm_label": "get /:code redirect handler"
+    },
+    {
+      "label": "GET /shorten Handler",
+      "file_type": "code",
+      "source_file": "routes/url.js",
+      "source_location": "14-16",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "routes_url_getshorten",
+      "community": 1,
+      "norm_label": "get /shorten handler"
+    },
+    {
+      "label": "POST /shorten URL Creation Handler",
+      "file_type": "code",
+      "source_file": "routes/url.js",
+      "source_location": "20-63",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "routes_url_postshorten",
+      "community": 1,
+      "norm_label": "post /shorten url creation handler"
+    },
+    {
+      "label": "URL Shortener HTML Form",
+      "file_type": "code",
+      "source_file": "public/home.html",
+      "source_location": "10-13",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "public_home_form",
+      "community": 1,
+      "norm_label": "url shortener html form"
+    },
+    {
+      "label": "URL Shortener Service",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "url_shortener_service",
+      "community": 1,
+      "norm_label": "url shortener service"
+    },
+    {
+      "label": "URL Deduplication Pattern",
+      "file_type": "rationale",
+      "source_file": "routes/url.js",
+      "source_location": "38-42",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "url_deduplication_pattern",
+      "community": 1,
+      "norm_label": "url deduplication pattern"
+    },
+    {
+      "label": "Short ID Generation via shortid",
+      "file_type": "concept",
+      "source_file": "routes/url.js",
+      "source_location": "33",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "shortid_generation",
+      "community": 1,
+      "norm_label": "short id generation via shortid"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "index_js",
+      "target": "url_shortner_index_express",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "index_js",
+      "target": "config_db_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "index_js",
+      "target": "url_shortner_index_connectdb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "index_js",
+      "target": "url_shortner_index_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "index_js",
+      "target": "url_shortner_index_bodyparser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "index_js",
+      "target": "url_shortner_index_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "config/db.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "config_db_js",
+      "target": "config_db_mongoose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "config/db.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "config_db_js",
+      "target": "config_db_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "config/db.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "config_db_js",
+      "target": "config_db_copyfilesync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "config/db.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "config_db_js",
+      "target": "config_db_db",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "config/db.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "config_db_js",
+      "target": "config_db_connectdb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.js",
+      "source_location": "9",
+      "weight": 1.0,
+      "source": "index_app",
+      "target": "config_db_connectdb"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "config/db.js",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "config_db_connectdb",
+      "target": "models_url_urlmodel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models/url.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "models_url_js",
+      "target": "models_url_mongoose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models/url.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "models_url_js",
+      "target": "models_url_urlschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/index.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "routes_index_js",
+      "target": "models_url_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "routes_url_js",
+      "target": "models_url_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "models/url.js",
+      "source_location": "10",
+      "weight": 1.0,
+      "source": "models_url_urlschema",
+      "target": "models_url_urlmodel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/index.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "routes_index_js",
+      "target": "routes_index_express",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/index.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "routes_index_js",
+      "target": "routes_index_router",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/index.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "routes_index_js",
+      "target": "routes_index_url",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "routes_url_js",
+      "target": "routes_url_express",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "routes_url_js",
+      "target": "routes_url_router",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "routes_url_js",
+      "target": "routes_url_validurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "routes_url_js",
+      "target": "routes_url_shortid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "routes_url_js",
+      "target": "routes_url_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "routes_url_js",
+      "target": "routes_url_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "routes_url_js",
+      "target": "routes_url_bodyparser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "routes_url_js",
+      "target": "routes_url_url",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "routes_url_js",
+      "target": "routes_url_baseurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "routes_url_js",
+      "target": "routes_url_urlcode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "routes/index.js",
+      "source_location": "10",
+      "weight": 1.0,
+      "source": "routes_index_redirecthandler",
+      "target": "models_url_urlmodel"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "routes/url.js",
+      "source_location": "38,44-51",
+      "weight": 1.0,
+      "source": "routes_url_postshorten",
+      "target": "models_url_urlmodel"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "url_shortener_service",
+      "target": "models_url_urlmodel"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "routes/index.js",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "routes_index_redirecthandler",
+      "target": "url_shortener_service"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "routes/index.js",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "routes_index_redirecthandler",
+      "target": "routes_url_postshorten"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "routes/url.js",
+      "source_location": "15",
+      "weight": 1.0,
+      "source": "routes_url_getshorten",
+      "target": "public_home_form"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "routes/url.js",
+      "source_location": "33",
+      "weight": 1.0,
+      "source": "routes_url_postshorten",
+      "target": "shortid_generation"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "routes/url.js",
+      "source_location": "38-54",
+      "weight": 1.0,
+      "source": "routes_url_postshorten",
+      "target": "url_deduplication_pattern"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/home.html",
+      "source_location": "10",
+      "weight": 1.0,
+      "source": "public_home_form",
+      "target": "routes_url_postshorten"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "routes/url.js",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "routes_url_postshorten",
+      "target": "url_shortener_service"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "url_shorten_flow",
+      "label": "URL Shortening Request Flow",
+      "nodes": [
+        "public_home_form",
+        "routes_url_postshorten",
+        "models_url_urlmodel"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "routes/url.js"
+    },
+    {
+      "id": "url_redirect_flow",
+      "label": "URL Redirect Lookup Flow",
+      "nodes": [
+        "routes_index_redirecthandler",
+        "models_url_urlmodel",
+        "url_shortener_service"
+      ],
+      "relation": "implement",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "routes/index.js"
+    },
+    {
+      "id": "app_bootstrap_flow",
+      "label": "Application Bootstrap and DB Connection",
+      "nodes": [
+        "index_app",
+        "config_db_connectdb",
+        "models_url_urlmodel"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "index.js"
+    }
+  ],
+  "built_at_commit": "8d486e4444bded5cb664a53cbc4264217c4fbda9"
+}
