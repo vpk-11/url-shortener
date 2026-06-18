@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL INSERT</title>
+    <title>URL Shortener</title>
 </head>
 <body>
     <form method="POST" action="/api/url/shorten">
-        <label for="Long Url">Enter the Long Url: </label>
-        <input id="Long Url" type="url" name="longUrl" />
-        <input type="submit" value="Upload" />
+        <label for="longUrl">Enter the Long URL: </label>
+        <input id="longUrl" type="url" name="longUrl" required />
+        <input type="submit" value="Shorten" />
+    </form>
 </body>
 </html>
