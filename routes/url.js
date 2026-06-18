@@ -1,65 +1,63 @@
 const express = require('express');
 const router = express.Router();
-const validUrl = require('valid-url');
-const shortid = require('shortid');
-const config = require('config');
 const path = require('path');
-const bodyParser = require('body-parser');
+const Url = require('../models/url');
 
-/*
-const app = express();
-app.use(bodyParser.urlencoded({ extended: true }));*/
-const Url = require('../models/Url');
+const nanoidPromise = import('nanoid').then(m => m.nanoid);
 
-router.get('/shorten',(req,res) => {
-    res.sendFile('/Users/vpkaushik11/Desktop/Programming/Web-Dev/Delta Tasks/On-Site /URL Shortener/public/home.html');
+function isValidUrl(str) {
+    try {
+        const u = new URL(str);
+        return u.protocol === 'http:' || u.protocol === 'https:';
+    } catch { return false; }
+}
+
+router.get('/shorten', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public', 'home.html'));
 });
 
-// @route     POST /api/url/shorten
-// @desc      Create short URL
 router.post('/shorten', async (req, res) => {
-        console.log(req.body);
+    const { longUrl } = req.body;
+    const baseUrl = process.env.BASE_URL;
 
-
-  const { longUrl } = req.body;
-  const baseUrl = config.get('baseUrl');
-
-  // Check base url
-  if (!validUrl.isUri(baseUrl)) {
-    return res.status(401).json('Invalid base url');
-  }
-
-  // Create url code
-  const urlCode = shortid.generate();
-
-  // Check long url
-  if (validUrl.isUri(longUrl)) {
-    try {
-      let url = await Url.findOne({ longUrl });
-
-      if (url) {
-        res.json(url);
-      } else {
-        const shortUrl = baseUrl + '/' + urlCode;
-
-        url = new Url({
-          longUrl,
-          shortUrl,
-          urlCode,
-          date: new Date()
-        });
-
-        await url.save();
-
-        res.json(url);
-      }
-    } catch (err) {
-      console.error(err);
-      res.status(500).json('Server error2');
+    if (!isValidUrl(baseUrl)) {
+        return res.status(400).json('Invalid base url');
     }
-  } else {
-    res.status(401).json('Invalid long url');
-  }
+
+    if (!isValidUrl(longUrl)) {
+        return res.status(400).json('Invalid long url');
+    }
+
+    try {
+        let url = await Url.findOne({ longUrl });
+
+        if (url) {
+            return res.json(url);
+        }
+
+        const nanoid = await nanoidPromise;
+
+        const saveWithCode = async (code) => {
+            const shortUrl = `${baseUrl}/${code}`;
+            const doc = new Url({ longUrl, shortUrl, urlCode: code, date: new Date() });
+            return doc.save();
+        };
+
+        try {
+            url = await saveWithCode(nanoid());
+        } catch (err) {
+            if (err.code === 11000) {
+                url = await saveWithCode(nanoid());
+            } else {
+                throw err;
+            }
+        }
+
+        res.json(url);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json('Server error');
+    }
 });
 
 module.exports = router;
