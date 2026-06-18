@@ -1,5 +1,7 @@
 /node_modules
 .DS_Store
+.env
 
+# Graphify runtime files
 graphify-out/manifest.json
 graphify-out/cost.json
