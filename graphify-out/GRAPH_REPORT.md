@@ -1,89 +1,118 @@
-# Graph Report - .  (2026-05-15)
+# Graph Report - url-shortner  (2026-06-18)
 
 ## Corpus Check
-- Corpus is ~688 words - fits in a single context window. You may not need a graph.
+- 10 files · ~2,942 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 39 nodes · 41 edges · 5 communities
-- Extraction: 88% EXTRACTED · 12% INFERRED · 0% AMBIGUOUS · INFERRED: 5 edges (avg confidence: 0.81)
+- 83 nodes · 79 edges · 12 communities (9 shown, 3 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.75)
 - Token cost: 0 input · 0 output
 
+## Graph Freshness
+- Built from commit: `e1f4230b`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
+
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_URL Route Dependencies|URL Route Dependencies]]
-- [[_COMMUNITY_URL Shorten and Redirect Handlers|URL Shorten and Redirect Handlers]]
-- [[_COMMUNITY_Database Config and Connection|Database Config and Connection]]
-- [[_COMMUNITY_Mongoose Schema and Model Setup|Mongoose Schema and Model Setup]]
-- [[_COMMUNITY_App Entry Point|App Entry Point]]
+- [[_COMMUNITY_Package Metadata|Package Metadata]]
+- [[_COMMUNITY_App Bootstrap and DB|App Bootstrap and DB]]
+- [[_COMMUNITY_URL Shortening Flow|URL Shortening Flow]]
+- [[_COMMUNITY_URL Validation and Code Gen|URL Validation and Code Gen]]
+- [[_COMMUNITY_Mongoose Model and Redirect|Mongoose Model and Redirect]]
+- [[_COMMUNITY_Runtime Dependencies|Runtime Dependencies]]
+- [[_COMMUNITY_Claude Code Permissions|Claude Code Permissions]]
+- [[_COMMUNITY_Project Documentation|Project Documentation]]
+- [[_COMMUNITY_Community 8|Community 8]]
+- [[_COMMUNITY_Community 9|Community 9]]
+- [[_COMMUNITY_Community 10|Community 10]]
+- [[_COMMUNITY_Community 11|Community 11]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `POST /shorten URL Creation Handler` - 6 edges
-2. `Url Mongoose Model` - 5 edges
-3. `connectDB()` - 3 edges
-4. `GET /:code Redirect Handler` - 3 edges
-5. `URL Shortener Service` - 3 edges
-6. `urlSchema` - 2 edges
-7. `URL Shortener HTML Form` - 2 edges
-8. `express` - 1 edges
-9. `connectDB` - 1 edges
-10. `path` - 1 edges
+1. `Core Stack` - 8 edges
+2. `URL Shortener — Session Plan` - 7 edges
+3. `Gap Analysis` - 4 edges
+4. `Url Mongoose Model` - 4 edges
+5. `Environment` - 3 edges
+6. `connectDB()` - 3 edges
+7. `urlSchema` - 3 edges
+8. `scripts` - 3 edges
+9. `POST /shorten Handler` - 3 edges
+10. `permissions` - 2 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `URL Shortener Service` --conceptually_related_to--> `Url Mongoose Model`  [INFERRED]
-  README.md → models/url.js
-- `GET /:code Redirect Handler` --implements--> `URL Shortener Service`  [INFERRED]
-  routes/index.js → README.md
-- `URL Shortener HTML Form` --references--> `POST /shorten URL Creation Handler`  [EXTRACTED]
-  public/home.html → routes/url.js
-- `POST /shorten URL Creation Handler` --implements--> `URL Shortener Service`  [INFERRED]
-  routes/url.js → README.md
-- `connectDB()` --shares_data_with--> `Url Mongoose Model`  [INFERRED]
+- `connectDB()` --shares_data_with--> `urlSchema`  [INFERRED]
   config/db.js → models/url.js
+- `app` --calls--> `connectDB()`  [EXTRACTED]
+  index.js → config/db.js
+- `Redirect by Code Handler` --calls--> `Url Mongoose Model`  [EXTRACTED]
+  routes/index.js → models/url.js
+- `saveWithCode Inner Function` --calls--> `Url Mongoose Model`  [EXTRACTED]
+  routes/url.js → models/url.js
+- `POST /shorten Handler` --calls--> `Url Mongoose Model`  [EXTRACTED]
+  routes/url.js → models/url.js
+
+## Import Cycles
+- None detected.
 
 ## Hyperedges (group relationships)
-- **URL Shortening Request Flow** — public_home_form, routes_url_postshorten, models_url_urlmodel [EXTRACTED 1.00]
-- **URL Redirect Lookup Flow** — routes_index_redirecthandler, models_url_urlmodel, url_shortener_service [INFERRED 0.85]
-- **Application Bootstrap and DB Connection** — index_app, config_db_connectdb, models_url_urlmodel [INFERRED 0.75]
+- **URL Shortening Request Flow** — public_home_form, routes_url_shorten_post, models_url_urlmodel [EXTRACTED 1.00]
+- **Short Code Redirect Flow** — routes_index_redirect_handler, models_url_urlmodel, concept_url_deduplication [INFERRED 0.85]
+- **App Bootstrap and DB Connection Flow** — index_app, config_db_connectdb, models_url_urlschema [EXTRACTED 1.00]
 
-## Communities (5 total, 0 thin omitted)
+## Communities (12 total, 3 thin omitted)
 
-### Community 0 - "URL Route Dependencies"
-Cohesion: 0.18
-Nodes (10): baseUrl, bodyParser, config, express, path, router, shortid, Url (+2 more)
+### Community 0 - "Package Metadata"
+Cohesion: 0.17
+Nodes (11): author, description, devDependencies, nodemon, license, main, name, scripts (+3 more)
 
-### Community 1 - "URL Shorten and Redirect Handlers"
-Cohesion: 0.36
-Nodes (8): Url Mongoose Model, URL Shortener HTML Form, GET /:code Redirect Handler, GET /shorten Handler, POST /shorten URL Creation Handler, Short ID Generation via shortid, URL Deduplication Pattern, URL Shortener Service
-
-### Community 2 - "Database Config and Connection"
+### Community 1 - "App Bootstrap and DB"
 Cohesion: 0.29
-Nodes (6): config, connectDB(), { copyFileSync }, db, mongoose, Express App Entry Point
+Nodes (6): connectDB(), mongoose, app, connectDB, express, path
 
-### Community 3 - "Mongoose Schema and Model Setup"
-Cohesion: 0.29
-Nodes (5): mongoose, urlSchema, express, router, Url
+### Community 3 - "URL Validation and Code Gen"
+Cohesion: 0.16
+Nodes (12): mongoose, Url Mongoose Model, urlSchema, Redirect by Code Handler, express, isValidUrl(), nanoidPromise, path (+4 more)
 
-### Community 4 - "App Entry Point"
-Cohesion: 0.33
-Nodes (5): app, bodyParser, connectDB, express, path
+### Community 4 - "Mongoose Model and Redirect"
+Cohesion: 0.50
+Nodes (3): express, router, Url
+
+### Community 5 - "Runtime Dependencies"
+Cohesion: 0.40
+Nodes (5): dependencies, dotenv, express, mongoose, nanoid
+
+### Community 8 - "Community 8"
+Cohesion: 0.13
+Nodes (13): API / Router Surface, Architecture Summary, Cleanup Notes, Code Quality Flags, Current State, Environment, Key Decisions, Local Dev (+5 more)
+
+### Community 9 - "Community 9"
+Cohesion: 0.25
+Nodes (8): AI / LLM Layer, Backend, Core Stack, Database & Storage, Deployment Config, Dev Tooling, External APIs & Integrations, Frontend
+
+### Community 10 - "Community 10"
+Cohesion: 0.25
+Nodes (7): Code Fixes, Dependency Upgrade Targets, Done When, Repo Cleanup, Security Baseline — All Blocking, Session Scope, URL Shortener — Session Plan
+
+### Community 11 - "Community 11"
+Cohesion: 0.50
+Nodes (4): Gap Analysis, Major reworks (1+ week), Medium lifts (1–3 days each), Quick wins (< 1 day each)
 
 ## Knowledge Gaps
-- **27 isolated node(s):** `express`, `connectDB`, `path`, `bodyParser`, `app` (+22 more)
+- **58 isolated node(s):** `One-Liner`, `Current State`, `Frontend`, `Backend`, `AI / LLM Layer` (+53 more)
   These have ≤1 connection - possible missing edges or undocumented components.
+- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Url Mongoose Model` connect `URL Shorten and Redirect Handlers` to `Database Config and Connection`, `Mongoose Schema and Model Setup`?**
-  _High betweenness centrality (0.642) - this node is a cross-community bridge._
-- **Why does `urlSchema` connect `Mongoose Schema and Model Setup` to `URL Shorten and Redirect Handlers`?**
-  _High betweenness centrality (0.508) - this node is a cross-community bridge._
-- **Why does `connectDB()` connect `Database Config and Connection` to `URL Shorten and Redirect Handlers`?**
-  _High betweenness centrality (0.459) - this node is a cross-community bridge._
-- **Are the 2 inferred relationships involving `POST /shorten URL Creation Handler` (e.g. with `URL Shortener Service` and `GET /:code Redirect Handler`) actually correct?**
-  _`POST /shorten URL Creation Handler` has 2 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 2 inferred relationships involving `Url Mongoose Model` (e.g. with `URL Shortener Service` and `connectDB()`) actually correct?**
-  _`Url Mongoose Model` has 2 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 2 inferred relationships involving `GET /:code Redirect Handler` (e.g. with `URL Shortener Service` and `POST /shorten URL Creation Handler`) actually correct?**
-  _`GET /:code Redirect Handler` has 2 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 3 inferred relationships involving `URL Shortener Service` (e.g. with `Url Mongoose Model` and `GET /:code Redirect Handler`) actually correct?**
-  _`URL Shortener Service` has 3 INFERRED edges - model-reasoned connections that need verification._
+- **Why does `urlSchema` connect `URL Validation and Code Gen` to `App Bootstrap and DB`?**
+  _High betweenness centrality (0.049) - this node is a cross-community bridge._
+- **Why does `Core Stack` connect `Community 9` to `Community 8`?**
+  _High betweenness centrality (0.046) - this node is a cross-community bridge._
+- **Why does `connectDB()` connect `App Bootstrap and DB` to `URL Validation and Code Gen`?**
+  _High betweenness centrality (0.038) - this node is a cross-community bridge._
+- **What connects `One-Liner`, `Current State`, `Frontend` to the rest of the system?**
+  _58 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Community 8` be split into smaller, more focused modules?**
+  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._

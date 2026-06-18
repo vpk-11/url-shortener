@@ -1,1 +1,14 @@
-{"0": "URL Route Dependencies", "1": "URL Shorten and Redirect Handlers", "2": "Database Config and Connection", "3": "Mongoose Schema and Model Setup", "4": "App Entry Point"}
+{
+  "0": "Package Metadata",
+  "1": "App Bootstrap and DB",
+  "2": "URL Shortening Flow",
+  "3": "URL Validation and Code Gen",
+  "4": "Mongoose Model and Redirect",
+  "5": "Runtime Dependencies",
+  "6": "Claude Code Permissions",
+  "7": "Project Documentation",
+  "8": "Community 8",
+  "9": "Community 9",
+  "10": "Community 10",
+  "11": "Community 11"
+}

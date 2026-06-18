@@ -4,11 +4,11 @@
   "graph": {
     "hyperedges": [
       {
-        "id": "url_shorten_flow",
+        "id": "shorten_flow",
         "label": "URL Shortening Request Flow",
         "nodes": [
           "public_home_form",
-          "routes_url_postshorten",
+          "routes_url_shorten_post",
           "models_url_urlmodel"
         ],
         "relation": "participate_in",
@@ -17,316 +17,803 @@
         "source_file": "routes/url.js"
       },
       {
-        "id": "url_redirect_flow",
-        "label": "URL Redirect Lookup Flow",
+        "id": "redirect_flow",
+        "label": "Short Code Redirect Flow",
         "nodes": [
-          "routes_index_redirecthandler",
+          "routes_index_redirect_handler",
           "models_url_urlmodel",
-          "url_shortener_service"
+          "concept_url_deduplication"
         ],
-        "relation": "implement",
+        "relation": "participate_in",
         "confidence": "INFERRED",
         "confidence_score": 0.85,
         "source_file": "routes/index.js"
       },
       {
-        "id": "app_bootstrap_flow",
-        "label": "Application Bootstrap and DB Connection",
+        "id": "bootstrap_flow",
+        "label": "App Bootstrap and DB Connection Flow",
         "nodes": [
           "index_app",
           "config_db_connectdb",
-          "models_url_urlmodel"
+          "models_url_urlschema"
         ],
         "relation": "participate_in",
-        "confidence": "INFERRED",
-        "confidence_score": 0.75,
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
         "source_file": "index.js"
       }
     ]
   },
   "nodes": [
     {
-      "label": "index.js",
-      "file_type": "code",
-      "source_file": "index.js",
+      "label": "PROJECT_CONTEXT.md",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L1",
-      "id": "index_js",
-      "community": 4,
-      "norm_label": "index.js"
+      "_origin": "ast",
+      "id": "project_context",
+      "community": 8,
+      "norm_label": "project_context.md"
     },
     {
-      "label": "express",
-      "file_type": "code",
-      "source_file": "index.js",
+      "label": "PROJECT_CONTEXT.md",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L1",
-      "id": "url_shortner_index_express",
-      "community": 4,
-      "norm_label": "express"
+      "_origin": "ast",
+      "id": "project_context_project_context_md",
+      "community": 8,
+      "norm_label": "project_context.md"
     },
     {
-      "label": "connectDB",
-      "file_type": "code",
-      "source_file": "index.js",
-      "source_location": "L2",
-      "id": "url_shortner_index_connectdb",
-      "community": 4,
-      "norm_label": "connectdb"
-    },
-    {
-      "label": "path",
-      "file_type": "code",
-      "source_file": "index.js",
+      "label": "One-Liner",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L3",
-      "id": "url_shortner_index_path",
-      "community": 4,
-      "norm_label": "path"
+      "_origin": "ast",
+      "id": "project_context_one_liner",
+      "community": 8,
+      "norm_label": "one-liner"
     },
     {
-      "label": "bodyParser",
-      "file_type": "code",
-      "source_file": "index.js",
-      "source_location": "L4",
-      "id": "url_shortner_index_bodyparser",
-      "community": 4,
-      "norm_label": "bodyparser"
-    },
-    {
-      "label": "app",
-      "file_type": "code",
-      "source_file": "index.js",
+      "label": "Current State",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L6",
-      "id": "url_shortner_index_app",
-      "community": 4,
-      "norm_label": "app"
+      "_origin": "ast",
+      "id": "project_context_current_state",
+      "community": 8,
+      "norm_label": "current state"
+    },
+    {
+      "label": "Core Stack",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "project_context_core_stack",
+      "community": 9,
+      "norm_label": "core stack"
+    },
+    {
+      "label": "Frontend",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "project_context_frontend",
+      "community": 9,
+      "norm_label": "frontend"
+    },
+    {
+      "label": "Backend",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "project_context_backend",
+      "community": 9,
+      "norm_label": "backend"
+    },
+    {
+      "label": "AI / LLM Layer",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "project_context_ai_llm_layer",
+      "community": 9,
+      "norm_label": "ai / llm layer"
+    },
+    {
+      "label": "Database & Storage",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "project_context_database_storage",
+      "community": 9,
+      "norm_label": "database & storage"
+    },
+    {
+      "label": "External APIs & Integrations",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "project_context_external_apis_integrations",
+      "community": 9,
+      "norm_label": "external apis & integrations"
+    },
+    {
+      "label": "Dev Tooling",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "project_context_dev_tooling",
+      "community": 9,
+      "norm_label": "dev tooling"
+    },
+    {
+      "label": "Deployment Config",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "project_context_deployment_config",
+      "community": 9,
+      "norm_label": "deployment config"
+    },
+    {
+      "label": "Architecture Summary",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "project_context_architecture_summary",
+      "community": 8,
+      "norm_label": "architecture summary"
+    },
+    {
+      "label": "Runtime Flow",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "project_context_runtime_flow",
+      "community": 8,
+      "norm_label": "runtime flow"
+    },
+    {
+      "label": "API / Router Surface",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "project_context_api_router_surface",
+      "community": 8,
+      "norm_label": "api / router surface"
+    },
+    {
+      "label": "Environment",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L94",
+      "_origin": "ast",
+      "id": "project_context_environment",
+      "community": 8,
+      "norm_label": "environment"
+    },
+    {
+      "label": "Required",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L95",
+      "_origin": "ast",
+      "id": "project_context_required",
+      "community": 8,
+      "norm_label": "required"
+    },
+    {
+      "label": "Optional",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L99",
+      "_origin": "ast",
+      "id": "project_context_optional",
+      "community": 8,
+      "norm_label": "optional"
+    },
+    {
+      "label": "Key Decisions",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L103",
+      "_origin": "ast",
+      "id": "project_context_key_decisions",
+      "community": 8,
+      "norm_label": "key decisions"
+    },
+    {
+      "label": "Local Dev",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L111",
+      "_origin": "ast",
+      "id": "project_context_local_dev",
+      "community": 8,
+      "norm_label": "local dev"
+    },
+    {
+      "label": "Code Quality Flags",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L119",
+      "_origin": "ast",
+      "id": "project_context_code_quality_flags",
+      "community": 8,
+      "norm_label": "code quality flags"
+    },
+    {
+      "label": "Resume / Portfolio Highlights",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L143",
+      "_origin": "ast",
+      "id": "project_context_resume_portfolio_highlights",
+      "community": 8,
+      "norm_label": "resume / portfolio highlights"
+    },
+    {
+      "label": "Gap Analysis",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L149",
+      "_origin": "ast",
+      "id": "project_context_gap_analysis",
+      "community": 11,
+      "norm_label": "gap analysis"
+    },
+    {
+      "label": "Quick wins (< 1 day each)",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L150",
+      "_origin": "ast",
+      "id": "project_context_quick_wins_1_day_each",
+      "community": 11,
+      "norm_label": "quick wins (< 1 day each)"
+    },
+    {
+      "label": "Medium lifts (1\u20133 days each)",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L158",
+      "_origin": "ast",
+      "id": "project_context_medium_lifts_1_3_days_each",
+      "community": 11,
+      "norm_label": "medium lifts (1\u20133 days each)"
+    },
+    {
+      "label": "Major reworks (1+ week)",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L165",
+      "_origin": "ast",
+      "id": "project_context_major_reworks_1_week",
+      "community": 11,
+      "norm_label": "major reworks (1+ week)"
+    },
+    {
+      "label": "Cleanup Notes",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L171",
+      "_origin": "ast",
+      "id": "project_context_cleanup_notes",
+      "community": 8,
+      "norm_label": "cleanup notes"
+    },
+    {
+      "label": "SESSION-PLAN.md",
+      "file_type": "document",
+      "source_file": "SESSION-PLAN.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "session_plan",
+      "community": 10,
+      "norm_label": "session-plan.md"
+    },
+    {
+      "label": "URL Shortener \u2014 Session Plan",
+      "file_type": "document",
+      "source_file": "SESSION-PLAN.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "session_plan_url_shortener_session_plan",
+      "community": 10,
+      "norm_label": "url shortener \u2014 session plan"
+    },
+    {
+      "label": "Session Scope",
+      "file_type": "document",
+      "source_file": "SESSION-PLAN.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "session_plan_session_scope",
+      "community": 10,
+      "norm_label": "session scope"
+    },
+    {
+      "label": "Dependency Upgrade Targets",
+      "file_type": "document",
+      "source_file": "SESSION-PLAN.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "session_plan_dependency_upgrade_targets",
+      "community": 10,
+      "norm_label": "dependency upgrade targets"
+    },
+    {
+      "label": "Security Baseline \u2014 All Blocking",
+      "file_type": "document",
+      "source_file": "SESSION-PLAN.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "session_plan_security_baseline_all_blocking",
+      "community": 10,
+      "norm_label": "security baseline \u2014 all blocking"
+    },
+    {
+      "label": "Code Fixes",
+      "file_type": "document",
+      "source_file": "SESSION-PLAN.md",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "session_plan_code_fixes",
+      "community": 10,
+      "norm_label": "code fixes"
+    },
+    {
+      "label": "Repo Cleanup",
+      "file_type": "document",
+      "source_file": "SESSION-PLAN.md",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "session_plan_repo_cleanup",
+      "community": 10,
+      "norm_label": "repo cleanup"
+    },
+    {
+      "label": "Done When",
+      "file_type": "document",
+      "source_file": "SESSION-PLAN.md",
+      "source_location": "L80",
+      "_origin": "ast",
+      "id": "session_plan_done_when",
+      "community": 10,
+      "norm_label": "done when"
+    },
+    {
+      "label": "settings.local.json",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "settings.local.json",
+      "id": "claude_settings_local"
+    },
+    {
+      "label": "permissions",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "permissions",
+      "id": "claude_settings_local_permissions"
+    },
+    {
+      "label": "allow",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "allow",
+      "id": "claude_settings_local_permissions_allow"
     },
     {
       "label": "db.js",
       "file_type": "code",
       "source_file": "config/db.js",
       "source_location": "L1",
-      "id": "config_db_js",
-      "community": 2,
-      "norm_label": "db.js"
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "db.js",
+      "id": "config_db"
     },
     {
       "label": "mongoose",
       "file_type": "code",
       "source_file": "config/db.js",
       "source_location": "L1",
-      "id": "config_db_mongoose",
-      "community": 2,
-      "norm_label": "mongoose"
-    },
-    {
-      "label": "config",
-      "file_type": "code",
-      "source_file": "config/db.js",
-      "source_location": "L2",
-      "id": "config_db_config",
-      "community": 2,
-      "norm_label": "config"
-    },
-    {
-      "label": "{ copyFileSync }",
-      "file_type": "code",
-      "source_file": "config/db.js",
-      "source_location": "L3",
-      "id": "config_db_copyfilesync",
-      "community": 2,
-      "norm_label": "{ copyfilesync }"
-    },
-    {
-      "label": "db",
-      "file_type": "code",
-      "source_file": "config/db.js",
-      "source_location": "L4",
-      "id": "config_db_db",
-      "community": 2,
-      "norm_label": "db"
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "mongoose",
+      "id": "config_db_mongoose"
     },
     {
       "label": "connectDB()",
       "file_type": "code",
       "source_file": "config/db.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "connectdb()",
+      "id": "config_db_connectdb"
+    },
+    {
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "index.js",
+      "id": "index"
+    },
+    {
+      "label": "express",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "express",
+      "id": "index_express"
+    },
+    {
+      "label": "connectDB",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "connectdb",
+      "id": "index_connectdb"
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "path",
+      "id": "index_path"
+    },
+    {
+      "label": "app",
+      "file_type": "code",
+      "source_file": "index.js",
       "source_location": "L6",
-      "id": "config_db_connectdb",
-      "community": 2,
-      "norm_label": "connectdb()"
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "app",
+      "id": "index_app"
     },
     {
       "label": "url.js",
       "file_type": "code",
       "source_file": "models/url.js",
       "source_location": "L1",
-      "id": "models_url_js",
+      "_origin": "ast",
       "community": 3,
-      "norm_label": "url.js"
+      "norm_label": "url.js",
+      "id": "models_url"
     },
     {
       "label": "mongoose",
       "file_type": "code",
       "source_file": "models/url.js",
       "source_location": "L1",
-      "id": "models_url_mongoose",
+      "_origin": "ast",
       "community": 3,
-      "norm_label": "mongoose"
+      "norm_label": "mongoose",
+      "id": "models_url_mongoose"
     },
     {
       "label": "urlSchema",
       "file_type": "code",
       "source_file": "models/url.js",
       "source_location": "L3",
-      "id": "models_url_urlschema",
+      "_origin": "ast",
       "community": 3,
-      "norm_label": "urlschema"
+      "norm_label": "urlschema",
+      "id": "models_url_urlschema"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "package.json",
+      "id": "package"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "name",
+      "id": "package_name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "version",
+      "id": "package_version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "description",
+      "id": "package_description"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "main",
+      "id": "package_main"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "scripts",
+      "id": "package_scripts"
+    },
+    {
+      "label": "start",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "start",
+      "id": "package_scripts_start"
+    },
+    {
+      "label": "test",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "test",
+      "id": "package_scripts_test"
+    },
+    {
+      "label": "author",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "author",
+      "id": "package_author"
+    },
+    {
+      "label": "license",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "license",
+      "id": "package_license"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "dependencies",
+      "id": "package_dependencies"
+    },
+    {
+      "label": "dotenv",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "dotenv",
+      "id": "package_dependencies_dotenv"
+    },
+    {
+      "label": "express",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "express",
+      "id": "package_dependencies_express"
+    },
+    {
+      "label": "mongoose",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "mongoose",
+      "id": "package_dependencies_mongoose"
+    },
+    {
+      "label": "nanoid",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "nanoid",
+      "id": "package_dependencies_nanoid"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "devdependencies",
+      "id": "package_devdependencies"
+    },
+    {
+      "label": "nodemon",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "nodemon",
+      "id": "package_devdependencies_nodemon"
     },
     {
       "label": "index.js",
       "file_type": "code",
       "source_file": "routes/index.js",
       "source_location": "L1",
-      "id": "routes_index_js",
-      "community": 3,
-      "norm_label": "index.js"
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "index.js",
+      "id": "routes_index"
     },
     {
       "label": "express",
       "file_type": "code",
       "source_file": "routes/index.js",
       "source_location": "L1",
-      "id": "routes_index_express",
-      "community": 3,
-      "norm_label": "express"
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "express",
+      "id": "routes_index_express"
     },
     {
       "label": "router",
       "file_type": "code",
       "source_file": "routes/index.js",
       "source_location": "L2",
-      "id": "routes_index_router",
-      "community": 3,
-      "norm_label": "router"
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "router",
+      "id": "routes_index_router"
     },
     {
       "label": "Url",
       "file_type": "code",
       "source_file": "routes/index.js",
       "source_location": "L4",
-      "id": "routes_index_url",
-      "community": 3,
-      "norm_label": "url"
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "url",
+      "id": "routes_index_url"
     },
     {
       "label": "url.js",
       "file_type": "code",
       "source_file": "routes/url.js",
       "source_location": "L1",
-      "id": "routes_url_js",
-      "community": 0,
-      "norm_label": "url.js"
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "url.js",
+      "id": "routes_url"
     },
     {
       "label": "express",
       "file_type": "code",
       "source_file": "routes/url.js",
       "source_location": "L1",
-      "id": "routes_url_express",
-      "community": 0,
-      "norm_label": "express"
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "express",
+      "id": "routes_url_express"
     },
     {
       "label": "router",
       "file_type": "code",
       "source_file": "routes/url.js",
       "source_location": "L2",
-      "id": "routes_url_router",
-      "community": 0,
-      "norm_label": "router"
-    },
-    {
-      "label": "validUrl",
-      "file_type": "code",
-      "source_file": "routes/url.js",
-      "source_location": "L3",
-      "id": "routes_url_validurl",
-      "community": 0,
-      "norm_label": "validurl"
-    },
-    {
-      "label": "shortid",
-      "file_type": "code",
-      "source_file": "routes/url.js",
-      "source_location": "L4",
-      "id": "routes_url_shortid",
-      "community": 0,
-      "norm_label": "shortid"
-    },
-    {
-      "label": "config",
-      "file_type": "code",
-      "source_file": "routes/url.js",
-      "source_location": "L5",
-      "id": "routes_url_config",
-      "community": 0,
-      "norm_label": "config"
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "router",
+      "id": "routes_url_router"
     },
     {
       "label": "path",
       "file_type": "code",
       "source_file": "routes/url.js",
-      "source_location": "L6",
-      "id": "routes_url_path",
-      "community": 0,
-      "norm_label": "path"
-    },
-    {
-      "label": "bodyParser",
-      "file_type": "code",
-      "source_file": "routes/url.js",
-      "source_location": "L7",
-      "id": "routes_url_bodyparser",
-      "community": 0,
-      "norm_label": "bodyparser"
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "path",
+      "id": "routes_url_path"
     },
     {
       "label": "Url",
       "file_type": "code",
       "source_file": "routes/url.js",
-      "source_location": "L12",
-      "id": "routes_url_url",
-      "community": 0,
-      "norm_label": "url"
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "url",
+      "id": "routes_url_url"
     },
     {
-      "label": "baseUrl",
+      "label": "nanoidPromise",
       "file_type": "code",
       "source_file": "routes/url.js",
-      "source_location": "L25",
-      "id": "routes_url_baseurl",
-      "community": 0,
-      "norm_label": "baseurl"
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "nanoidpromise",
+      "id": "routes_url_nanoidpromise"
     },
     {
-      "label": "urlCode",
+      "label": "isValidUrl()",
       "file_type": "code",
       "source_file": "routes/url.js",
-      "source_location": "L33",
-      "id": "routes_url_urlcode",
-      "community": 0,
-      "norm_label": "urlcode"
-    },
-    {
-      "label": "Express App Entry Point",
-      "file_type": "code",
-      "source_file": "index.js",
-      "source_location": "1-21",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "index_app",
-      "community": 2,
-      "norm_label": "express app entry point"
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "isvalidurl()",
+      "id": "routes_url_isvalidurl"
     },
     {
       "label": "Url Mongoose Model",
@@ -337,223 +824,457 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "models_url_urlmodel",
-      "community": 1,
-      "norm_label": "url mongoose model"
+      "community": 3,
+      "norm_label": "url mongoose model",
+      "id": "models_url_urlmodel"
     },
     {
-      "label": "GET /:code Redirect Handler",
+      "label": "Redirect by Code Handler",
       "file_type": "code",
       "source_file": "routes/index.js",
-      "source_location": "8-21",
+      "source_location": "6-18",
       "source_url": null,
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "routes_index_redirecthandler",
-      "community": 1,
-      "norm_label": "get /:code redirect handler"
+      "community": 3,
+      "norm_label": "redirect by code handler",
+      "id": "routes_index_redirect_handler"
     },
     {
       "label": "GET /shorten Handler",
       "file_type": "code",
       "source_file": "routes/url.js",
-      "source_location": "14-16",
+      "source_location": "13-15",
       "source_url": null,
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "routes_url_getshorten",
-      "community": 1,
-      "norm_label": "get /shorten handler"
+      "community": 2,
+      "norm_label": "get /shorten handler",
+      "id": "routes_url_shorten_get"
     },
     {
-      "label": "POST /shorten URL Creation Handler",
+      "label": "POST /shorten Handler",
       "file_type": "code",
       "source_file": "routes/url.js",
-      "source_location": "20-63",
+      "source_location": "17-58",
       "source_url": null,
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "routes_url_postshorten",
-      "community": 1,
-      "norm_label": "post /shorten url creation handler"
+      "community": 3,
+      "norm_label": "post /shorten handler",
+      "id": "routes_url_shorten_post"
     },
     {
-      "label": "URL Shortener HTML Form",
+      "label": "saveWithCode Inner Function",
       "file_type": "code",
-      "source_file": "public/home.html",
-      "source_location": "10-13",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "public_home_form",
-      "community": 1,
-      "norm_label": "url shortener html form"
-    },
-    {
-      "label": "URL Shortener Service",
-      "file_type": "concept",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "url_shortener_service",
-      "community": 1,
-      "norm_label": "url shortener service"
-    },
-    {
-      "label": "URL Deduplication Pattern",
-      "file_type": "rationale",
       "source_file": "routes/url.js",
       "source_location": "38-42",
       "source_url": null,
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "url_deduplication_pattern",
-      "community": 1,
-      "norm_label": "url deduplication pattern"
+      "community": 3,
+      "norm_label": "savewithcode inner function",
+      "id": "routes_url_savewithcode"
     },
     {
-      "label": "Short ID Generation via shortid",
-      "file_type": "concept",
-      "source_file": "routes/url.js",
-      "source_location": "33",
+      "label": "URL Shortener README",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
       "source_url": null,
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "shortid_generation",
-      "community": 1,
-      "norm_label": "short id generation via shortid"
+      "community": 7,
+      "norm_label": "url shortener readme",
+      "id": "readme_doc"
     }
   ],
   "links": [
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "index.js",
+      "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "index_js",
-      "target": "url_shortner_index_express",
+      "source": "project_context",
+      "target": "project_context_project_context_md",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "project_context_project_context_md",
+      "target": "project_context_api_router_surface",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "project_context_project_context_md",
+      "target": "project_context_architecture_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "project_context_project_context_md",
+      "target": "project_context_cleanup_notes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L119",
+      "weight": 1.0,
+      "source": "project_context_project_context_md",
+      "target": "project_context_code_quality_flags",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "project_context_project_context_md",
+      "target": "project_context_core_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "project_context_project_context_md",
+      "target": "project_context_current_state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "project_context_project_context_md",
+      "target": "project_context_environment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L149",
+      "weight": 1.0,
+      "source": "project_context_project_context_md",
+      "target": "project_context_gap_analysis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "project_context_project_context_md",
+      "target": "project_context_key_decisions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "project_context_project_context_md",
+      "target": "project_context_local_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "project_context_project_context_md",
+      "target": "project_context_one_liner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "project_context_project_context_md",
+      "target": "project_context_resume_portfolio_highlights",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "project_context_project_context_md",
+      "target": "project_context_runtime_flow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "project_context_core_stack",
+      "target": "project_context_ai_llm_layer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "project_context_core_stack",
+      "target": "project_context_backend",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "project_context_core_stack",
+      "target": "project_context_database_storage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "project_context_core_stack",
+      "target": "project_context_deployment_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "project_context_core_stack",
+      "target": "project_context_dev_tooling",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "project_context_core_stack",
+      "target": "project_context_external_apis_integrations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "project_context_core_stack",
+      "target": "project_context_frontend",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "project_context_environment",
+      "target": "project_context_optional",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "project_context_environment",
+      "target": "project_context_required",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L165",
+      "weight": 1.0,
+      "source": "project_context_gap_analysis",
+      "target": "project_context_major_reworks_1_week",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "project_context_gap_analysis",
+      "target": "project_context_medium_lifts_1_3_days_each",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "project_context_gap_analysis",
+      "target": "project_context_quick_wins_1_day_each",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "SESSION-PLAN.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "session_plan",
+      "target": "session_plan_url_shortener_session_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "SESSION-PLAN.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "session_plan_url_shortener_session_plan",
+      "target": "session_plan_code_fixes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "SESSION-PLAN.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "session_plan_url_shortener_session_plan",
+      "target": "session_plan_dependency_upgrade_targets",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "SESSION-PLAN.md",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "session_plan_url_shortener_session_plan",
+      "target": "session_plan_done_when",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "SESSION-PLAN.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "session_plan_url_shortener_session_plan",
+      "target": "session_plan_repo_cleanup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "SESSION-PLAN.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "session_plan_url_shortener_session_plan",
+      "target": "session_plan_security_baseline_all_blocking",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "SESSION-PLAN.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "session_plan_url_shortener_session_plan",
+      "target": "session_plan_session_scope",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_settings_local",
+      "target": "claude_settings_local_permissions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_settings_local_permissions",
+      "target": "claude_settings_local_permissions_allow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "config/db.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "config_db",
+      "target": "config_db_connectdb"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "config/db.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "config_db",
+      "target": "config_db_mongoose"
     },
     {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "index.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "index_js",
-      "target": "config_db_js",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "index.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "index_js",
-      "target": "url_shortner_index_connectdb",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "index.js",
       "source_location": "L3",
       "weight": 1.0,
-      "source": "index_js",
-      "target": "url_shortner_index_path",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "index.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "index_js",
-      "target": "url_shortner_index_bodyparser",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "index.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "source": "index_js",
-      "target": "url_shortner_index_app",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "config/db.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "config_db_js",
-      "target": "config_db_mongoose",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "config/db.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "config_db_js",
-      "target": "config_db_config",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "config/db.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "config_db_js",
-      "target": "config_db_copyfilesync",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "config/db.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "config_db_js",
-      "target": "config_db_db",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "config/db.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "source": "config_db_js",
-      "target": "config_db_connectdb",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "index.js",
-      "source_location": "9",
-      "weight": 1.0,
-      "source": "index_app",
-      "target": "config_db_connectdb"
+      "source": "index",
+      "target": "config_db"
     },
     {
       "relation": "shares_data_with",
@@ -561,9 +1282,59 @@
       "confidence_score": 0.75,
       "source_file": "config/db.js",
       "source_location": null,
-      "weight": 1.0,
+      "weight": 0.75,
       "source": "config_db_connectdb",
-      "target": "models_url_urlmodel"
+      "target": "models_url_urlschema"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.js",
+      "source_location": "8",
+      "weight": 1.0,
+      "source": "index_app",
+      "target": "config_db_connectdb"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "index",
+      "target": "index_app"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "index",
+      "target": "index_connectdb"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "index",
+      "target": "index_express"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "index",
+      "target": "index_path"
     },
     {
       "relation": "contains",
@@ -571,9 +1342,9 @@
       "source_file": "models/url.js",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "models_url_js",
-      "target": "models_url_mongoose",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "models_url",
+      "target": "models_url_mongoose"
     },
     {
       "relation": "contains",
@@ -581,9 +1352,9 @@
       "source_file": "models/url.js",
       "source_location": "L3",
       "weight": 1.0,
-      "source": "models_url_js",
-      "target": "models_url_urlschema",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "models_url",
+      "target": "models_url_urlschema"
     },
     {
       "relation": "imports_from",
@@ -592,110 +1363,240 @@
       "source_file": "routes/index.js",
       "source_location": "L4",
       "weight": 1.0,
-      "source": "routes_index_js",
-      "target": "models_url_js",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "routes_index",
+      "target": "models_url"
     },
     {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "routes/url.js",
-      "source_location": "L12",
+      "source_location": "L4",
       "weight": 1.0,
-      "source": "routes_url_js",
-      "target": "models_url_js",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "routes_url",
+      "target": "models_url"
     },
     {
-      "relation": "references",
+      "relation": "implements",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "models/url.js",
       "source_location": "10",
       "weight": 1.0,
-      "source": "models_url_urlschema",
-      "target": "models_url_urlmodel"
+      "source": "models_url_urlmodel",
+      "target": "models_url_urlschema"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "routes/index.js",
-      "source_location": "L1",
+      "source_file": "package.json",
+      "source_location": "L10",
       "weight": 1.0,
-      "source": "routes_index_js",
-      "target": "routes_index_express",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_author"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "routes/index.js",
-      "source_location": "L2",
+      "source_file": "package.json",
+      "source_location": "L12",
       "weight": 1.0,
-      "source": "routes_index_js",
-      "target": "routes_index_router",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_dependencies"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "routes/index.js",
+      "source_file": "package.json",
       "source_location": "L4",
       "weight": 1.0,
-      "source": "routes_index_js",
-      "target": "routes_index_url",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_description"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
-      "source_location": "L1",
+      "source_file": "package.json",
+      "source_location": "L18",
       "weight": 1.0,
-      "source": "routes_url_js",
-      "target": "routes_url_express",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_devdependencies"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
-      "source_location": "L2",
+      "source_file": "package.json",
+      "source_location": "L11",
       "weight": 1.0,
-      "source": "routes_url_js",
-      "target": "routes_url_router",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_license"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "routes_url_js",
-      "target": "routes_url_validurl",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "routes_url_js",
-      "target": "routes_url_shortid",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
+      "source_file": "package.json",
       "source_location": "L5",
       "weight": 1.0,
-      "source": "routes_url_js",
-      "target": "routes_url_config",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_main"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_name"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_scripts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_version"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_start"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_test"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_dotenv"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_express"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_mongoose"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_nanoid"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_nodemon"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/index.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_index",
+      "target": "routes_index_express"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/index.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_index",
+      "target": "routes_index_router"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/index.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_index",
+      "target": "routes_index_url"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_url",
+      "target": "routes_url_express"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_url",
+      "target": "routes_url_isvalidurl"
     },
     {
       "relation": "contains",
@@ -703,158 +1604,98 @@
       "source_file": "routes/url.js",
       "source_location": "L6",
       "weight": 1.0,
-      "source": "routes_url_js",
-      "target": "routes_url_path",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "source": "routes_url_js",
-      "target": "routes_url_bodyparser",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "routes_url_js",
-      "target": "routes_url_url",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
-      "source_location": "L25",
-      "weight": 1.0,
-      "source": "routes_url_js",
-      "target": "routes_url_baseurl",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
-      "source_location": "L33",
-      "weight": 1.0,
-      "source": "routes_url_js",
-      "target": "routes_url_urlcode",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "routes/index.js",
-      "source_location": "10",
+      "source": "routes_url",
+      "target": "routes_url_nanoidpromise"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L3",
       "weight": 1.0,
-      "source": "routes_index_redirecthandler",
-      "target": "models_url_urlmodel"
+      "confidence_score": 1.0,
+      "source": "routes_url",
+      "target": "routes_url_path"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_url",
+      "target": "routes_url_router"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_url",
+      "target": "routes_url_url"
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "routes/url.js",
-      "source_location": "38,44-51",
+      "source_location": "21-25",
       "weight": 1.0,
-      "source": "routes_url_postshorten",
+      "source": "routes_url_shorten_post",
+      "target": "routes_url_isvalidurl"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "routes/index.js",
+      "source_location": "8",
+      "weight": 1.0,
+      "source": "routes_index_redirect_handler",
       "target": "models_url_urlmodel"
     },
     {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "README.md",
-      "source_location": null,
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "routes/url.js",
+      "source_location": "40-41",
       "weight": 1.0,
-      "source": "url_shortener_service",
+      "source": "routes_url_savewithcode",
       "target": "models_url_urlmodel"
     },
     {
-      "relation": "implements",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "routes/index.js",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "routes_index_redirecthandler",
-      "target": "url_shortener_service"
-    },
-    {
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.65,
-      "source_file": "routes/index.js",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "routes_index_redirecthandler",
-      "target": "routes_url_postshorten"
-    },
-    {
-      "relation": "references",
+      "relation": "calls",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "routes/url.js",
-      "source_location": "15",
+      "source_location": "30",
       "weight": 1.0,
-      "source": "routes_url_getshorten",
-      "target": "public_home_form"
+      "source": "routes_url_shorten_post",
+      "target": "models_url_urlmodel"
     },
     {
-      "relation": "references",
+      "relation": "calls",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "routes/url.js",
-      "source_location": "33",
+      "source_location": "45-48",
       "weight": 1.0,
-      "source": "routes_url_postshorten",
-      "target": "shortid_generation"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "routes/url.js",
-      "source_location": "38-54",
-      "weight": 1.0,
-      "source": "routes_url_postshorten",
-      "target": "url_deduplication_pattern"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "public/home.html",
-      "source_location": "10",
-      "weight": 1.0,
-      "source": "public_home_form",
-      "target": "routes_url_postshorten"
-    },
-    {
-      "relation": "implements",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "routes/url.js",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "routes_url_postshorten",
-      "target": "url_shortener_service"
+      "source": "routes_url_shorten_post",
+      "target": "routes_url_savewithcode"
     }
   ],
   "hyperedges": [
     {
-      "id": "url_shorten_flow",
+      "id": "shorten_flow",
       "label": "URL Shortening Request Flow",
       "nodes": [
         "public_home_form",
-        "routes_url_postshorten",
+        "routes_url_shorten_post",
         "models_url_urlmodel"
       ],
       "relation": "participate_in",
@@ -863,31 +1704,31 @@
       "source_file": "routes/url.js"
     },
     {
-      "id": "url_redirect_flow",
-      "label": "URL Redirect Lookup Flow",
+      "id": "redirect_flow",
+      "label": "Short Code Redirect Flow",
       "nodes": [
-        "routes_index_redirecthandler",
+        "routes_index_redirect_handler",
         "models_url_urlmodel",
-        "url_shortener_service"
+        "concept_url_deduplication"
       ],
-      "relation": "implement",
+      "relation": "participate_in",
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "source_file": "routes/index.js"
     },
     {
-      "id": "app_bootstrap_flow",
-      "label": "Application Bootstrap and DB Connection",
+      "id": "bootstrap_flow",
+      "label": "App Bootstrap and DB Connection Flow",
       "nodes": [
         "index_app",
         "config_db_connectdb",
-        "models_url_urlmodel"
+        "models_url_urlschema"
       ],
       "relation": "participate_in",
-      "confidence": "INFERRED",
-      "confidence_score": 0.75,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "index.js"
     }
   ],
-  "built_at_commit": "8d486e4444bded5cb664a53cbc4264217c4fbda9"
+  "built_at_commit": "e1f4230b37bc7792801a75637e2a3474a5153181"
 }
