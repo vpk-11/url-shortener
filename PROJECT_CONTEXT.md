@@ -73,7 +73,7 @@ Data model: `Url` collection holds `urlCode`, `longUrl`, `shortUrl`, `date`.
 ## Runtime Flow
 
 ### Bootstrap
-`index.js` calls `connectDB()`, registers middleware, mounts routers, listens on `PORT`.
+`src/index.ts` calls `connectDB()`, registers middleware, mounts routers, listens on `PORT`.
 
 ### Shorten (`POST /api/url/shorten`)
 1. Validate `BASE_URL` env var and submitted `longUrl` with `isValidUrl()` (http/https only, blocks `javascript:` and other schemes).
@@ -124,13 +124,39 @@ pnpm start
 - Committed outputs: `graphify-out/graph.html`, `graphify-out/GRAPH_REPORT.md`, `graphify-out/graph.json`.
 - Machine-local files gitignored: `manifest.json`, `cost.json`, `.graphify_root`, `.graphify_python`, dated snapshot dirs (`YYYY-MM-DD/`).
 
-## Known Gaps / Future Work
-- No test suite. Route handlers and model behavior are untested.
-- No rate limiting or abuse controls on URL creation.
-- No auth or ownership model.
-- No click tracking or analytics.
-- No health check endpoint.
-- Redirect performance relies on MongoDB lookup per request; no cache layer.
+## Planned Work
+
+### Next: UI overhaul
+The current frontend is a bare HTML form at `/api/url/shorten`. It will be replaced with a proper UI.
+
+Design intent:
+- React SPA served from `/` (static build in `public/` or separate frontend service).
+- `/api/*` becomes pure JSON — no HTML served from route handlers. The `GET /api/url/shorten` form route is removed; the form lives in the frontend.
+- The `POST /api/url/shorten` response shape is already clean JSON — no backend changes needed for the happy path.
+- Short link display, copy-to-clipboard, and link history (if auth is added) are frontend concerns.
+
+Backend prep needed: none. API shape is already suitable.
+
+### Next: Analytics dashboard
+Click tracking does not exist. Adding it requires changes to both the data layer and the API surface.
+
+Data layer:
+- Option A: add `clicks: number` to `IUrl` and `$inc` on every redirect. Simple, loses time-series data.
+- Option B (preferred): separate `Click` collection — `{ urlCode, timestamp, referrer?, userAgent? }`. Records one document per redirect. Enables time-series queries, per-code charts, and referrer breakdown without schema changes to `Url`.
+- IP logging: avoid or anonymize (hash + truncate) for privacy.
+
+API additions needed:
+- `GET /api/url/:code/stats` — click count, first/last seen, referrer breakdown.
+- `GET /api/url/` — list all shortened URLs with click totals (requires auth to be useful).
+
+Dashboard UI: separate from the shorten form. Can live at `/dashboard` in the same React SPA.
+
+### Later
+- Auth and ownership model (links tied to a user).
+- Rate limiting on `POST /api/url/shorten`.
+- Health check endpoint (`GET /health`).
+- Test suite for route handlers and model behavior.
+- Cache layer for redirect lookups (Redis or in-process LRU) if latency matters at volume.
 
 ## Changelog
 
