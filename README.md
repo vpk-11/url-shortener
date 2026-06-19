@@ -8,7 +8,7 @@ Built as a clean backend exercise: Express 5, Mongoose 8, nanoid for code genera
 
 ```bash
 # 1. clone and install
-npm install
+pnpm install
 
 # 2. configure environment
 cp .env.example .env
@@ -16,11 +16,18 @@ cp .env.example .env
 
 # 3. start MongoDB locally (or point MONGO_URI at a hosted instance)
 
-# 4. run
-npm start
+# 4. run dev server
+pnpm dev
 ```
 
 The app listens on `PORT` (default: `5000`). Open `http://localhost:5000/api/url/shorten` to use the form.
+
+For production, build first:
+
+```bash
+pnpm build   # compiles src/ -> dist/
+pnpm start   # runs dist/index.js
+```
 
 ## Environment Variables
 
@@ -42,12 +49,14 @@ The app listens on `PORT` (default: `5000`). Open `http://localhost:5000/api/url
 
 ## Stack
 
+- **Language:** TypeScript 5 (strict)
 - **Runtime:** Node.js 22.x
 - **Framework:** Express 5
 - **Database:** MongoDB via Mongoose 8
 - **Code generation:** nanoid 5
 - **Config:** dotenv
-- **Dev server:** nodemon 3
+- **Dev server:** tsx watch
+- **Package manager:** pnpm 10
 
 ## Notes
 

@@ -89,7 +89,7 @@
       "label": "Core Stack",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L13",
+      "source_location": "L11",
       "_origin": "ast",
       "id": "project_context_core_stack",
       "community": 9,
@@ -99,7 +99,7 @@
       "label": "Frontend",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L15",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "project_context_frontend",
       "community": 9,
@@ -109,7 +109,7 @@
       "label": "Backend",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L20",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "project_context_backend",
       "community": 9,
@@ -119,7 +119,7 @@
       "label": "AI / LLM Layer",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L27",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "project_context_ai_llm_layer",
       "community": 9,
@@ -129,7 +129,7 @@
       "label": "Database & Storage",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L30",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "project_context_database_storage",
       "community": 9,
@@ -139,7 +139,7 @@
       "label": "External APIs & Integrations",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L36",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "project_context_external_apis_integrations",
       "community": 9,
@@ -149,7 +149,7 @@
       "label": "Dev Tooling",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L41",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "project_context_dev_tooling",
       "community": 9,
@@ -159,47 +159,17 @@
       "label": "Deployment Config",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L47",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "project_context_deployment_config",
       "community": 9,
       "norm_label": "deployment config"
     },
     {
-      "label": "Architecture Summary",
-      "file_type": "document",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L51",
-      "_origin": "ast",
-      "id": "project_context_architecture_summary",
-      "community": 8,
-      "norm_label": "architecture summary"
-    },
-    {
-      "label": "Runtime Flow",
-      "file_type": "document",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L68",
-      "_origin": "ast",
-      "id": "project_context_runtime_flow",
-      "community": 8,
-      "norm_label": "runtime flow"
-    },
-    {
-      "label": "API / Router Surface",
-      "file_type": "document",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L83",
-      "_origin": "ast",
-      "id": "project_context_api_router_surface",
-      "community": 8,
-      "norm_label": "api / router surface"
-    },
-    {
       "label": "Environment",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L94",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "project_context_environment",
       "community": 8,
@@ -209,7 +179,7 @@
       "label": "Required",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L95",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "project_context_required",
       "community": 8,
@@ -219,181 +189,201 @@
       "label": "Optional",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L99",
+      "source_location": "L49",
       "_origin": "ast",
       "id": "project_context_optional",
       "community": 8,
       "norm_label": "optional"
     },
     {
-      "label": "Key Decisions",
+      "label": "Architecture Summary",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L103",
+      "source_location": "L54",
       "_origin": "ast",
-      "id": "project_context_key_decisions",
+      "id": "project_context_architecture_summary",
       "community": 8,
-      "norm_label": "key decisions"
+      "norm_label": "architecture summary"
+    },
+    {
+      "label": "Runtime Flow",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "project_context_runtime_flow",
+      "community": 10,
+      "norm_label": "runtime flow"
+    },
+    {
+      "label": "Bootstrap",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "project_context_bootstrap",
+      "community": 10,
+      "norm_label": "bootstrap"
+    },
+    {
+      "label": "Shorten (`POST /api/url/shorten`)",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "project_context_shorten_post_api_url_shorten",
+      "community": 10,
+      "norm_label": "shorten (`post /api/url/shorten`)"
+    },
+    {
+      "label": "Redirect (`GET /:code`)",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "project_context_redirect_get_code",
+      "community": 10,
+      "norm_label": "redirect (`get /:code`)"
+    },
+    {
+      "label": "API Surface",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "project_context_api_surface",
+      "community": 8,
+      "norm_label": "api surface"
     },
     {
       "label": "Local Dev",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L111",
+      "source_location": "L92",
       "_origin": "ast",
       "id": "project_context_local_dev",
       "community": 8,
       "norm_label": "local dev"
     },
     {
-      "label": "Code Quality Flags",
+      "label": "Key Decisions",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L119",
+      "source_location": "L102",
       "_origin": "ast",
-      "id": "project_context_code_quality_flags",
+      "id": "project_context_key_decisions",
       "community": 8,
-      "norm_label": "code quality flags"
+      "norm_label": "key decisions"
     },
     {
-      "label": "Resume / Portfolio Highlights",
+      "label": "Graphify",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L143",
+      "source_location": "L109",
       "_origin": "ast",
-      "id": "project_context_resume_portfolio_highlights",
+      "id": "project_context_graphify",
       "community": 8,
-      "norm_label": "resume / portfolio highlights"
+      "norm_label": "graphify"
     },
     {
-      "label": "Gap Analysis",
+      "label": "Known Gaps / Future Work",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L149",
+      "source_location": "L114",
       "_origin": "ast",
-      "id": "project_context_gap_analysis",
-      "community": 11,
-      "norm_label": "gap analysis"
-    },
-    {
-      "label": "Quick wins (< 1 day each)",
-      "file_type": "document",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L150",
-      "_origin": "ast",
-      "id": "project_context_quick_wins_1_day_each",
-      "community": 11,
-      "norm_label": "quick wins (< 1 day each)"
-    },
-    {
-      "label": "Medium lifts (1\u20133 days each)",
-      "file_type": "document",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L158",
-      "_origin": "ast",
-      "id": "project_context_medium_lifts_1_3_days_each",
-      "community": 11,
-      "norm_label": "medium lifts (1\u20133 days each)"
-    },
-    {
-      "label": "Major reworks (1+ week)",
-      "file_type": "document",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L165",
-      "_origin": "ast",
-      "id": "project_context_major_reworks_1_week",
-      "community": 11,
-      "norm_label": "major reworks (1+ week)"
-    },
-    {
-      "label": "Cleanup Notes",
-      "file_type": "document",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L171",
-      "_origin": "ast",
-      "id": "project_context_cleanup_notes",
+      "id": "project_context_known_gaps_future_work",
       "community": 8,
-      "norm_label": "cleanup notes"
+      "norm_label": "known gaps / future work"
     },
     {
-      "label": "SESSION-PLAN.md",
+      "label": "Changelog",
       "file_type": "document",
-      "source_file": "SESSION-PLAN.md",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L122",
+      "_origin": "ast",
+      "id": "project_context_changelog",
+      "community": 8,
+      "norm_label": "changelog"
+    },
+    {
+      "label": "June 2026 \u2014 Dependency upgrade + security baseline",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L124",
+      "_origin": "ast",
+      "id": "project_context_june_2026_dependency_upgrade_security_baseline",
+      "community": 8,
+      "norm_label": "june 2026 \u2014 dependency upgrade + security baseline"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "session_plan",
-      "community": 10,
-      "norm_label": "session-plan.md"
+      "id": "readme",
+      "community": 7,
+      "norm_label": "readme.md"
     },
     {
-      "label": "URL Shortener \u2014 Session Plan",
+      "label": "URL Shortener",
       "file_type": "document",
-      "source_file": "SESSION-PLAN.md",
+      "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "session_plan_url_shortener_session_plan",
-      "community": 10,
-      "norm_label": "url shortener \u2014 session plan"
+      "id": "readme_url_shortener",
+      "community": 7,
+      "norm_label": "url shortener"
     },
     {
-      "label": "Session Scope",
+      "label": "Setup",
       "file_type": "document",
-      "source_file": "SESSION-PLAN.md",
+      "source_file": "README.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "session_plan_session_scope",
-      "community": 10,
-      "norm_label": "session scope"
+      "id": "readme_setup",
+      "community": 7,
+      "norm_label": "setup"
     },
     {
-      "label": "Dependency Upgrade Targets",
+      "label": "Environment Variables",
       "file_type": "document",
-      "source_file": "SESSION-PLAN.md",
-      "source_location": "L15",
+      "source_file": "README.md",
+      "source_location": "L25",
       "_origin": "ast",
-      "id": "session_plan_dependency_upgrade_targets",
-      "community": 10,
-      "norm_label": "dependency upgrade targets"
+      "id": "readme_environment_variables",
+      "community": 7,
+      "norm_label": "environment variables"
     },
     {
-      "label": "Security Baseline \u2014 All Blocking",
+      "label": "API",
       "file_type": "document",
-      "source_file": "SESSION-PLAN.md",
-      "source_location": "L41",
+      "source_file": "README.md",
+      "source_location": "L33",
       "_origin": "ast",
-      "id": "session_plan_security_baseline_all_blocking",
-      "community": 10,
-      "norm_label": "security baseline \u2014 all blocking"
+      "id": "readme_api",
+      "community": 7,
+      "norm_label": "api"
     },
     {
-      "label": "Code Fixes",
+      "label": "Stack",
       "file_type": "document",
-      "source_file": "SESSION-PLAN.md",
-      "source_location": "L51",
+      "source_file": "README.md",
+      "source_location": "L43",
       "_origin": "ast",
-      "id": "session_plan_code_fixes",
-      "community": 10,
-      "norm_label": "code fixes"
+      "id": "readme_stack",
+      "community": 7,
+      "norm_label": "stack"
     },
     {
-      "label": "Repo Cleanup",
+      "label": "Notes",
       "file_type": "document",
-      "source_file": "SESSION-PLAN.md",
-      "source_location": "L71",
+      "source_file": "README.md",
+      "source_location": "L52",
       "_origin": "ast",
-      "id": "session_plan_repo_cleanup",
-      "community": 10,
-      "norm_label": "repo cleanup"
-    },
-    {
-      "label": "Done When",
-      "file_type": "document",
-      "source_file": "SESSION-PLAN.md",
-      "source_location": "L80",
-      "_origin": "ast",
-      "id": "session_plan_done_when",
-      "community": 10,
-      "norm_label": "done when"
+      "id": "readme_notes",
+      "community": 7,
+      "norm_label": "notes"
     },
     {
       "label": "settings.local.json",
@@ -879,19 +869,6 @@
       "community": 3,
       "norm_label": "savewithcode inner function",
       "id": "routes_url_savewithcode"
-    },
-    {
-      "label": "URL Shortener README",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "url shortener readme",
-      "id": "readme_doc"
     }
   ],
   "links": [
@@ -901,18 +878,18 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context",
-      "target": "project_context_project_context_md",
-      "confidence_score": 1.0
+      "target": "project_context_project_context_md"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L83",
+      "source_location": "L82",
       "weight": 1.0,
       "source": "project_context_project_context_md",
-      "target": "project_context_api_router_surface",
+      "target": "project_context_api_surface",
       "confidence_score": 1.0
     },
     {
@@ -921,28 +898,18 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_project_context_md",
-      "target": "project_context_architecture_summary",
-      "confidence_score": 1.0
+      "target": "project_context_architecture_summary"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L171",
+      "source_location": "L122",
       "weight": 1.0,
       "source": "project_context_project_context_md",
-      "target": "project_context_cleanup_notes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L119",
-      "weight": 1.0,
-      "source": "project_context_project_context_md",
-      "target": "project_context_code_quality_flags",
+      "target": "project_context_changelog",
       "confidence_score": 1.0
     },
     {
@@ -951,9 +918,9 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_project_context_md",
-      "target": "project_context_core_stack",
-      "confidence_score": 1.0
+      "target": "project_context_core_stack"
     },
     {
       "relation": "contains",
@@ -961,9 +928,9 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_project_context_md",
-      "target": "project_context_current_state",
-      "confidence_score": 1.0
+      "target": "project_context_current_state"
     },
     {
       "relation": "contains",
@@ -971,18 +938,18 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L94",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_project_context_md",
-      "target": "project_context_environment",
-      "confidence_score": 1.0
+      "target": "project_context_environment"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L149",
+      "source_location": "L109",
       "weight": 1.0,
       "source": "project_context_project_context_md",
-      "target": "project_context_gap_analysis",
+      "target": "project_context_graphify",
       "confidence_score": 1.0
     },
     {
@@ -991,8 +958,18 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L103",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_project_context_md",
-      "target": "project_context_key_decisions",
+      "target": "project_context_key_decisions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "project_context_project_context_md",
+      "target": "project_context_known_gaps_future_work",
       "confidence_score": 1.0
     },
     {
@@ -1001,9 +978,9 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L111",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_project_context_md",
-      "target": "project_context_local_dev",
-      "confidence_score": 1.0
+      "target": "project_context_local_dev"
     },
     {
       "relation": "contains",
@@ -1011,19 +988,9 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_project_context_md",
-      "target": "project_context_one_liner",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L143",
-      "weight": 1.0,
-      "source": "project_context_project_context_md",
-      "target": "project_context_resume_portfolio_highlights",
-      "confidence_score": 1.0
+      "target": "project_context_one_liner"
     },
     {
       "relation": "contains",
@@ -1031,9 +998,9 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_project_context_md",
-      "target": "project_context_runtime_flow",
-      "confidence_score": 1.0
+      "target": "project_context_runtime_flow"
     },
     {
       "relation": "contains",
@@ -1041,9 +1008,9 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_core_stack",
-      "target": "project_context_ai_llm_layer",
-      "confidence_score": 1.0
+      "target": "project_context_ai_llm_layer"
     },
     {
       "relation": "contains",
@@ -1051,9 +1018,9 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_core_stack",
-      "target": "project_context_backend",
-      "confidence_score": 1.0
+      "target": "project_context_backend"
     },
     {
       "relation": "contains",
@@ -1061,9 +1028,9 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_core_stack",
-      "target": "project_context_database_storage",
-      "confidence_score": 1.0
+      "target": "project_context_database_storage"
     },
     {
       "relation": "contains",
@@ -1071,9 +1038,9 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L47",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_core_stack",
-      "target": "project_context_deployment_config",
-      "confidence_score": 1.0
+      "target": "project_context_deployment_config"
     },
     {
       "relation": "contains",
@@ -1081,9 +1048,9 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_core_stack",
-      "target": "project_context_dev_tooling",
-      "confidence_score": 1.0
+      "target": "project_context_dev_tooling"
     },
     {
       "relation": "contains",
@@ -1091,9 +1058,9 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_core_stack",
-      "target": "project_context_external_apis_integrations",
-      "confidence_score": 1.0
+      "target": "project_context_external_apis_integrations"
     },
     {
       "relation": "contains",
@@ -1101,9 +1068,9 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_core_stack",
-      "target": "project_context_frontend",
-      "confidence_score": 1.0
+      "target": "project_context_frontend"
     },
     {
       "relation": "contains",
@@ -1111,9 +1078,9 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L99",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_environment",
-      "target": "project_context_optional",
-      "confidence_score": 1.0
+      "target": "project_context_optional"
     },
     {
       "relation": "contains",
@@ -1121,108 +1088,108 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L95",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_environment",
-      "target": "project_context_required",
+      "target": "project_context_required"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "project_context_runtime_flow",
+      "target": "project_context_bootstrap",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L165",
+      "source_location": "L78",
       "weight": 1.0,
-      "source": "project_context_gap_analysis",
-      "target": "project_context_major_reworks_1_week",
+      "source": "project_context_runtime_flow",
+      "target": "project_context_redirect_get_code",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L158",
+      "source_location": "L72",
       "weight": 1.0,
-      "source": "project_context_gap_analysis",
-      "target": "project_context_medium_lifts_1_3_days_each",
+      "source": "project_context_runtime_flow",
+      "target": "project_context_shorten_post_api_url_shorten",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L150",
+      "source_location": "L124",
       "weight": 1.0,
-      "source": "project_context_gap_analysis",
-      "target": "project_context_quick_wins_1_day_each",
+      "source": "project_context_changelog",
+      "target": "project_context_june_2026_dependency_upgrade_security_baseline",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "SESSION-PLAN.md",
+      "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "session_plan",
-      "target": "session_plan_url_shortener_session_plan",
+      "source": "readme",
+      "target": "readme_url_shortener",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "SESSION-PLAN.md",
-      "source_location": "L51",
+      "source_file": "README.md",
+      "source_location": "L33",
       "weight": 1.0,
-      "source": "session_plan_url_shortener_session_plan",
-      "target": "session_plan_code_fixes",
+      "source": "readme_url_shortener",
+      "target": "readme_api",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "SESSION-PLAN.md",
-      "source_location": "L15",
+      "source_file": "README.md",
+      "source_location": "L25",
       "weight": 1.0,
-      "source": "session_plan_url_shortener_session_plan",
-      "target": "session_plan_dependency_upgrade_targets",
+      "source": "readme_url_shortener",
+      "target": "readme_environment_variables",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "SESSION-PLAN.md",
-      "source_location": "L80",
+      "source_file": "README.md",
+      "source_location": "L52",
       "weight": 1.0,
-      "source": "session_plan_url_shortener_session_plan",
-      "target": "session_plan_done_when",
+      "source": "readme_url_shortener",
+      "target": "readme_notes",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "SESSION-PLAN.md",
-      "source_location": "L71",
-      "weight": 1.0,
-      "source": "session_plan_url_shortener_session_plan",
-      "target": "session_plan_repo_cleanup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "SESSION-PLAN.md",
-      "source_location": "L41",
-      "weight": 1.0,
-      "source": "session_plan_url_shortener_session_plan",
-      "target": "session_plan_security_baseline_all_blocking",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "SESSION-PLAN.md",
+      "source_file": "README.md",
       "source_location": "L7",
       "weight": 1.0,
-      "source": "session_plan_url_shortener_session_plan",
-      "target": "session_plan_session_scope",
+      "source": "readme_url_shortener",
+      "target": "readme_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "readme_url_shortener",
+      "target": "readme_stack",
       "confidence_score": 1.0
     },
     {
@@ -1730,5 +1697,5 @@
       "source_file": "index.js"
     }
   ],
-  "built_at_commit": "e1f4230b37bc7792801a75637e2a3474a5153181"
+  "built_at_commit": "957b0fc2492db18530443817be148c03e5398b32"
 }
