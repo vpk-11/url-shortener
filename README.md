@@ -2,7 +2,7 @@
 
 A Node.js URL shortener backed by MongoDB. Submit a long URL, get a short code back, paste the short link anywhere — it redirects to the original.
 
-Built as a clean backend exercise: Express 5, Mongoose 8, nanoid for code generation, dotenv for config.
+Built with Express 5, Mongoose 8, TypeScript strict mode, and pnpm. The API is intentionally minimal — a React UI and analytics dashboard are planned next.
 
 ## Setup
 
@@ -63,4 +63,11 @@ pnpm start   # runs dist/index.js
 - URL validation accepts `http` and `https` only. `javascript:` and other schemes are rejected.
 - Short codes are unique at the DB layer (index on `urlCode`). Collisions trigger a single retry.
 - Duplicate long URLs return the same short code without creating a new record.
-- No auth, no rate limiting, no analytics. Suitable for local or trusted-network use.
+- No auth, no rate limiting, no analytics yet.
+
+## Roadmap
+
+- **UI**: replace the bare HTML form with a React SPA. `/api/*` will become pure JSON; the form moves to the frontend.
+- **Analytics**: per-link click tracking via a `Click` collection (code, timestamp, referrer). Dashboard at `/dashboard` showing click counts and referrer breakdown per link.
+- **Auth**: ownership model tying links to users, required for the dashboard to be meaningful.
+- **Rate limiting** on link creation.
