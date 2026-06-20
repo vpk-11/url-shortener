@@ -89,7 +89,7 @@
       "label": "Core Stack",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L11",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "project_context_core_stack",
       "community": 9,
@@ -99,7 +99,7 @@
       "label": "Frontend",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L13",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "project_context_frontend",
       "community": 9,
@@ -109,7 +109,7 @@
       "label": "Backend",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L17",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "project_context_backend",
       "community": 9,
@@ -119,7 +119,7 @@
       "label": "AI / LLM Layer",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L24",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "project_context_ai_llm_layer",
       "community": 9,
@@ -129,7 +129,7 @@
       "label": "Database & Storage",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L27",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "project_context_database_storage",
       "community": 9,
@@ -139,7 +139,7 @@
       "label": "External APIs & Integrations",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L32",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "project_context_external_apis_integrations",
       "community": 9,
@@ -149,7 +149,7 @@
       "label": "Dev Tooling",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L35",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "project_context_dev_tooling",
       "community": 9,
@@ -159,7 +159,7 @@
       "label": "Deployment Config",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L40",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "project_context_deployment_config",
       "community": 9,
@@ -169,7 +169,7 @@
       "label": "Environment",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L43",
+      "source_location": "L47",
       "_origin": "ast",
       "id": "project_context_environment",
       "community": 8,
@@ -179,7 +179,7 @@
       "label": "Required",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L45",
+      "source_location": "L49",
       "_origin": "ast",
       "id": "project_context_required",
       "community": 8,
@@ -189,7 +189,7 @@
       "label": "Optional",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L49",
+      "source_location": "L53",
       "_origin": "ast",
       "id": "project_context_optional",
       "community": 8,
@@ -199,7 +199,7 @@
       "label": "Architecture Summary",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L54",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "project_context_architecture_summary",
       "community": 8,
@@ -209,7 +209,7 @@
       "label": "Runtime Flow",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L67",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "project_context_runtime_flow",
       "community": 10,
@@ -219,7 +219,7 @@
       "label": "Bootstrap",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L69",
+      "source_location": "L75",
       "_origin": "ast",
       "id": "project_context_bootstrap",
       "community": 10,
@@ -229,7 +229,7 @@
       "label": "Shorten (`POST /api/url/shorten`)",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L72",
+      "source_location": "L78",
       "_origin": "ast",
       "id": "project_context_shorten_post_api_url_shorten",
       "community": 10,
@@ -239,7 +239,7 @@
       "label": "Redirect (`GET /:code`)",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L78",
+      "source_location": "L84",
       "_origin": "ast",
       "id": "project_context_redirect_get_code",
       "community": 10,
@@ -249,7 +249,7 @@
       "label": "API Surface",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L82",
+      "source_location": "L88",
       "_origin": "ast",
       "id": "project_context_api_surface",
       "community": 8,
@@ -259,7 +259,7 @@
       "label": "Local Dev",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L92",
+      "source_location": "L98",
       "_origin": "ast",
       "id": "project_context_local_dev",
       "community": 8,
@@ -269,7 +269,7 @@
       "label": "Key Decisions",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L102",
+      "source_location": "L114",
       "_origin": "ast",
       "id": "project_context_key_decisions",
       "community": 8,
@@ -279,41 +279,81 @@
       "label": "Graphify",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L109",
+      "source_location": "L122",
       "_origin": "ast",
       "id": "project_context_graphify",
       "community": 8,
       "norm_label": "graphify"
     },
     {
-      "label": "Known Gaps / Future Work",
+      "label": "Planned Work",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L114",
+      "source_location": "L127",
       "_origin": "ast",
-      "id": "project_context_known_gaps_future_work",
-      "community": 8,
-      "norm_label": "known gaps / future work"
+      "id": "project_context_planned_work",
+      "community": 4,
+      "norm_label": "planned work"
+    },
+    {
+      "label": "Next: UI overhaul",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L129",
+      "_origin": "ast",
+      "id": "project_context_next_ui_overhaul",
+      "community": 4,
+      "norm_label": "next: ui overhaul"
+    },
+    {
+      "label": "Next: Analytics dashboard",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L140",
+      "_origin": "ast",
+      "id": "project_context_next_analytics_dashboard",
+      "community": 4,
+      "norm_label": "next: analytics dashboard"
+    },
+    {
+      "label": "Later",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L154",
+      "_origin": "ast",
+      "id": "project_context_later",
+      "community": 4,
+      "norm_label": "later"
     },
     {
       "label": "Changelog",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L122",
+      "source_location": "L161",
       "_origin": "ast",
       "id": "project_context_changelog",
       "community": 8,
       "norm_label": "changelog"
     },
     {
-      "label": "June 2026 \u2014 Dependency upgrade + security baseline",
+      "label": "June 2026 (second pass) \u2014 TypeScript migration + pnpm",
       "file_type": "document",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L124",
+      "source_location": "L163",
       "_origin": "ast",
-      "id": "project_context_june_2026_dependency_upgrade_security_baseline",
+      "id": "project_context_june_2026_second_pass_typescript_migration_pnpm",
       "community": 8,
-      "norm_label": "june 2026 \u2014 dependency upgrade + security baseline"
+      "norm_label": "june 2026 (second pass) \u2014 typescript migration + pnpm"
+    },
+    {
+      "label": "June 2026 (first pass) \u2014 Dependency upgrade + security baseline",
+      "file_type": "document",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L172",
+      "_origin": "ast",
+      "id": "project_context_june_2026_first_pass_dependency_upgrade_security_baseline",
+      "community": 8,
+      "norm_label": "june 2026 (first pass) \u2014 dependency upgrade + security baseline"
     },
     {
       "label": "README.md",
@@ -349,7 +389,7 @@
       "label": "Environment Variables",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L25",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "readme_environment_variables",
       "community": 7,
@@ -359,7 +399,7 @@
       "label": "API",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L33",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "readme_api",
       "community": 7,
@@ -369,7 +409,7 @@
       "label": "Stack",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L43",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "readme_stack",
       "community": 7,
@@ -379,151 +419,21 @@
       "label": "Notes",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L52",
+      "source_location": "L61",
       "_origin": "ast",
       "id": "readme_notes",
       "community": 7,
       "norm_label": "notes"
     },
     {
-      "label": "settings.local.json",
-      "file_type": "code",
-      "source_file": ".claude/settings.local.json",
-      "source_location": "L1",
+      "label": "Roadmap",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L68",
       "_origin": "ast",
-      "community": 6,
-      "norm_label": "settings.local.json",
-      "id": "claude_settings_local"
-    },
-    {
-      "label": "permissions",
-      "file_type": "code",
-      "source_file": ".claude/settings.local.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "community": 6,
-      "norm_label": "permissions",
-      "id": "claude_settings_local_permissions"
-    },
-    {
-      "label": "allow",
-      "file_type": "code",
-      "source_file": ".claude/settings.local.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "community": 6,
-      "norm_label": "allow",
-      "id": "claude_settings_local_permissions_allow"
-    },
-    {
-      "label": "db.js",
-      "file_type": "code",
-      "source_file": "config/db.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 1,
-      "norm_label": "db.js",
-      "id": "config_db"
-    },
-    {
-      "label": "mongoose",
-      "file_type": "code",
-      "source_file": "config/db.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 1,
-      "norm_label": "mongoose",
-      "id": "config_db_mongoose"
-    },
-    {
-      "label": "connectDB()",
-      "file_type": "code",
-      "source_file": "config/db.js",
-      "source_location": "L3",
-      "_origin": "ast",
-      "community": 1,
-      "norm_label": "connectdb()",
-      "id": "config_db_connectdb"
-    },
-    {
-      "label": "index.js",
-      "file_type": "code",
-      "source_file": "index.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 1,
-      "norm_label": "index.js",
-      "id": "index"
-    },
-    {
-      "label": "express",
-      "file_type": "code",
-      "source_file": "index.js",
-      "source_location": "L2",
-      "_origin": "ast",
-      "community": 1,
-      "norm_label": "express",
-      "id": "index_express"
-    },
-    {
-      "label": "connectDB",
-      "file_type": "code",
-      "source_file": "index.js",
-      "source_location": "L3",
-      "_origin": "ast",
-      "community": 1,
-      "norm_label": "connectdb",
-      "id": "index_connectdb"
-    },
-    {
-      "label": "path",
-      "file_type": "code",
-      "source_file": "index.js",
-      "source_location": "L4",
-      "_origin": "ast",
-      "community": 1,
-      "norm_label": "path",
-      "id": "index_path"
-    },
-    {
-      "label": "app",
-      "file_type": "code",
-      "source_file": "index.js",
-      "source_location": "L6",
-      "_origin": "ast",
-      "community": 1,
-      "norm_label": "app",
-      "id": "index_app"
-    },
-    {
-      "label": "url.js",
-      "file_type": "code",
-      "source_file": "models/url.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "url.js",
-      "id": "models_url"
-    },
-    {
-      "label": "mongoose",
-      "file_type": "code",
-      "source_file": "models/url.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "mongoose",
-      "id": "models_url_mongoose"
-    },
-    {
-      "label": "urlSchema",
-      "file_type": "code",
-      "source_file": "models/url.js",
-      "source_location": "L3",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "urlschema",
-      "id": "models_url_urlschema"
+      "id": "readme_roadmap",
+      "community": 7,
+      "norm_label": "roadmap"
     },
     {
       "label": "package.json",
@@ -581,17 +491,37 @@
       "source_file": "package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "scripts",
       "id": "package_scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "dev",
+      "id": "package_scripts_dev"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "build",
+      "id": "package_scripts_build"
     },
     {
       "label": "start",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L7",
+      "source_location": "L9",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "start",
       "id": "package_scripts_start"
     },
@@ -599,9 +529,9 @@
       "label": "test",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L8",
+      "source_location": "L10",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "test",
       "id": "package_scripts_test"
     },
@@ -609,7 +539,7 @@
       "label": "author",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L10",
+      "source_location": "L12",
       "_origin": "ast",
       "community": 0,
       "norm_label": "author",
@@ -619,17 +549,37 @@
       "label": "license",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L11",
+      "source_location": "L13",
       "_origin": "ast",
       "community": 0,
       "norm_label": "license",
       "id": "package_license"
     },
     {
+      "label": "pnpm",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "pnpm",
+      "id": "package_pnpm"
+    },
+    {
+      "label": "onlyBuiltDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "onlybuiltdependencies",
+      "id": "package_pnpm_onlybuiltdependencies"
+    },
+    {
       "label": "dependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L12",
+      "source_location": "L17",
       "_origin": "ast",
       "community": 5,
       "norm_label": "dependencies",
@@ -639,7 +589,7 @@
       "label": "dotenv",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L13",
+      "source_location": "L18",
       "_origin": "ast",
       "community": 5,
       "norm_label": "dotenv",
@@ -649,7 +599,7 @@
       "label": "express",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L14",
+      "source_location": "L19",
       "_origin": "ast",
       "community": 5,
       "norm_label": "express",
@@ -659,7 +609,7 @@
       "label": "mongoose",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L15",
+      "source_location": "L20",
       "_origin": "ast",
       "community": 5,
       "norm_label": "mongoose",
@@ -669,7 +619,7 @@
       "label": "nanoid",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L16",
+      "source_location": "L21",
       "_origin": "ast",
       "community": 5,
       "norm_label": "nanoid",
@@ -679,117 +629,177 @@
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L18",
+      "source_location": "L23",
       "_origin": "ast",
       "community": 0,
       "norm_label": "devdependencies",
       "id": "package_devdependencies"
     },
     {
-      "label": "nodemon",
+      "label": "@types/express",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L24",
       "_origin": "ast",
       "community": 0,
-      "norm_label": "nodemon",
-      "id": "package_devdependencies_nodemon"
+      "norm_label": "@types/express",
+      "id": "package_devdependencies_types_express"
     },
     {
-      "label": "index.js",
+      "label": "@types/node",
       "file_type": "code",
-      "source_file": "routes/index.js",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "@types/node",
+      "id": "package_devdependencies_types_node"
+    },
+    {
+      "label": "tsx",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "tsx",
+      "id": "package_devdependencies_tsx"
+    },
+    {
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "typescript",
+      "id": "package_devdependencies_typescript"
+    },
+    {
+      "label": "db.ts",
+      "file_type": "code",
+      "source_file": "src/config/db.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 4,
-      "norm_label": "index.js",
-      "id": "routes_index"
+      "community": 3,
+      "norm_label": "db.ts",
+      "id": "config_db"
     },
     {
-      "label": "express",
+      "label": "connectDB()",
       "file_type": "code",
-      "source_file": "routes/index.js",
+      "source_file": "src/config/db.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "connectdb()",
+      "id": "config_db_connectdb"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/index.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 4,
-      "norm_label": "express",
-      "id": "routes_index_express"
+      "community": 3,
+      "norm_label": "index.ts",
+      "id": "src_index"
     },
     {
-      "label": "router",
+      "label": "app",
       "file_type": "code",
-      "source_file": "routes/index.js",
-      "source_location": "L2",
+      "source_file": "src/index.ts",
+      "source_location": "L8",
       "_origin": "ast",
-      "community": 4,
-      "norm_label": "router",
-      "id": "routes_index_router"
+      "community": 3,
+      "norm_label": "app",
+      "id": "src_index_app"
+    },
+    {
+      "label": "url.ts",
+      "file_type": "code",
+      "source_file": "src/models/url.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "url.ts",
+      "id": "models_url"
+    },
+    {
+      "label": "IUrl",
+      "file_type": "code",
+      "source_file": "src/models/url.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "iurl",
+      "id": "models_url_iurl"
+    },
+    {
+      "label": "urlSchema",
+      "file_type": "code",
+      "source_file": "src/models/url.ts",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "urlschema",
+      "id": "models_url_urlschema"
     },
     {
       "label": "Url",
       "file_type": "code",
-      "source_file": "routes/index.js",
-      "source_location": "L4",
+      "source_file": "src/models/url.ts",
+      "source_location": "L17",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": "url",
-      "id": "routes_index_url"
+      "id": "models_url_url"
     },
     {
-      "label": "url.js",
+      "label": "index.ts",
       "file_type": "code",
-      "source_file": "routes/url.js",
+      "source_file": "src/routes/index.ts",
       "source_location": "L1",
       "_origin": "ast",
       "community": 3,
-      "norm_label": "url.js",
-      "id": "routes_url"
-    },
-    {
-      "label": "express",
-      "file_type": "code",
-      "source_file": "routes/url.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "express",
-      "id": "routes_url_express"
+      "norm_label": "index.ts",
+      "id": "routes_index"
     },
     {
       "label": "router",
       "file_type": "code",
-      "source_file": "routes/url.js",
-      "source_location": "L2",
+      "source_file": "src/routes/index.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "router",
+      "id": "routes_index_router"
+    },
+    {
+      "label": "url.ts",
+      "file_type": "code",
+      "source_file": "src/routes/url.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "url.ts",
+      "id": "routes_url"
+    },
+    {
+      "label": "router",
+      "file_type": "code",
+      "source_file": "src/routes/url.ts",
+      "source_location": "L5",
       "_origin": "ast",
       "community": 3,
       "norm_label": "router",
       "id": "routes_url_router"
     },
     {
-      "label": "path",
-      "file_type": "code",
-      "source_file": "routes/url.js",
-      "source_location": "L3",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "path",
-      "id": "routes_url_path"
-    },
-    {
-      "label": "Url",
-      "file_type": "code",
-      "source_file": "routes/url.js",
-      "source_location": "L4",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "url",
-      "id": "routes_url_url"
-    },
-    {
       "label": "nanoidPromise",
       "file_type": "code",
-      "source_file": "routes/url.js",
-      "source_location": "L6",
+      "source_file": "src/routes/url.ts",
+      "source_location": "L7",
       "_origin": "ast",
       "community": 3,
       "norm_label": "nanoidpromise",
@@ -798,77 +808,172 @@
     {
       "label": "isValidUrl()",
       "file_type": "code",
-      "source_file": "routes/url.js",
-      "source_location": "L8",
+      "source_file": "src/routes/url.ts",
+      "source_location": "L9",
       "_origin": "ast",
       "community": 3,
       "norm_label": "isvalidurl()",
       "id": "routes_url_isvalidurl"
     },
     {
-      "label": "Url Mongoose Model",
+      "label": "tsconfig.json",
       "file_type": "code",
-      "source_file": "models/url.js",
-      "source_location": "10",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 3,
-      "norm_label": "url mongoose model",
-      "id": "models_url_urlmodel"
+      "source_file": "tsconfig.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "tsconfig.json",
+      "id": "tsconfig"
     },
     {
-      "label": "Redirect by Code Handler",
+      "label": "compilerOptions",
       "file_type": "code",
-      "source_file": "routes/index.js",
-      "source_location": "6-18",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 3,
-      "norm_label": "redirect by code handler",
-      "id": "routes_index_redirect_handler"
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "compileroptions",
+      "id": "tsconfig_compileroptions"
     },
     {
-      "label": "GET /shorten Handler",
+      "label": "target",
       "file_type": "code",
-      "source_file": "routes/url.js",
-      "source_location": "13-15",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 2,
-      "norm_label": "get /shorten handler",
-      "id": "routes_url_shorten_get"
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "target",
+      "id": "tsconfig_compileroptions_target"
     },
     {
-      "label": "POST /shorten Handler",
+      "label": "module",
       "file_type": "code",
-      "source_file": "routes/url.js",
-      "source_location": "17-58",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 3,
-      "norm_label": "post /shorten handler",
-      "id": "routes_url_shorten_post"
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "module",
+      "id": "tsconfig_compileroptions_module"
     },
     {
-      "label": "saveWithCode Inner Function",
+      "label": "moduleResolution",
       "file_type": "code",
-      "source_file": "routes/url.js",
-      "source_location": "38-42",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 3,
-      "norm_label": "savewithcode inner function",
-      "id": "routes_url_savewithcode"
+      "source_file": "tsconfig.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "moduleresolution",
+      "id": "tsconfig_compileroptions_moduleresolution"
+    },
+    {
+      "label": "outDir",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "outdir",
+      "id": "tsconfig_compileroptions_outdir"
+    },
+    {
+      "label": "rootDir",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "rootdir",
+      "id": "tsconfig_compileroptions_rootdir"
+    },
+    {
+      "label": "strict",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "strict",
+      "id": "tsconfig_compileroptions_strict"
+    },
+    {
+      "label": "esModuleInterop",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "esmoduleinterop",
+      "id": "tsconfig_compileroptions_esmoduleinterop"
+    },
+    {
+      "label": "skipLibCheck",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "skiplibcheck",
+      "id": "tsconfig_compileroptions_skiplibcheck"
+    },
+    {
+      "label": "forceConsistentCasingInFileNames",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "forceconsistentcasinginfilenames",
+      "id": "tsconfig_compileroptions_forceconsistentcasinginfilenames"
+    },
+    {
+      "label": "include",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "include",
+      "id": "tsconfig_include"
+    },
+    {
+      "label": "exclude",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "exclude",
+      "id": "tsconfig_exclude"
+    },
+    {
+      "label": "settings.local.json",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "settings.local.json",
+      "id": "claude_settings_local"
+    },
+    {
+      "label": "permissions",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "permissions",
+      "id": "claude_settings_local_permissions"
+    },
+    {
+      "label": "allow",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "allow",
+      "id": "claude_settings_local_permissions_allow"
     }
   ],
   "links": [
@@ -888,9 +993,9 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L82",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_project_context_md",
-      "target": "project_context_api_surface",
-      "confidence_score": 1.0
+      "target": "project_context_api_surface"
     },
     {
       "relation": "contains",
@@ -908,9 +1013,9 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L122",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_project_context_md",
-      "target": "project_context_changelog",
-      "confidence_score": 1.0
+      "target": "project_context_changelog"
     },
     {
       "relation": "contains",
@@ -948,9 +1053,9 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_project_context_md",
-      "target": "project_context_graphify",
-      "confidence_score": 1.0
+      "target": "project_context_graphify"
     },
     {
       "relation": "contains",
@@ -961,16 +1066,6 @@
       "confidence_score": 1.0,
       "source": "project_context_project_context_md",
       "target": "project_context_key_decisions"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L114",
-      "weight": 1.0,
-      "source": "project_context_project_context_md",
-      "target": "project_context_known_gaps_future_work",
-      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -991,6 +1086,16 @@
       "confidence_score": 1.0,
       "source": "project_context_project_context_md",
       "target": "project_context_one_liner"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "project_context_project_context_md",
+      "target": "project_context_planned_work",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1098,9 +1203,9 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L69",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_runtime_flow",
-      "target": "project_context_bootstrap",
-      "confidence_score": 1.0
+      "target": "project_context_bootstrap"
     },
     {
       "relation": "contains",
@@ -1108,9 +1213,9 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_runtime_flow",
-      "target": "project_context_redirect_get_code",
-      "confidence_score": 1.0
+      "target": "project_context_redirect_get_code"
     },
     {
       "relation": "contains",
@@ -1118,19 +1223,59 @@
       "source_file": "PROJECT_CONTEXT.md",
       "source_location": "L72",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_context_runtime_flow",
-      "target": "project_context_shorten_post_api_url_shorten",
+      "target": "project_context_shorten_post_api_url_shorten"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "project_context_planned_work",
+      "target": "project_context_later",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L124",
+      "source_location": "L140",
       "weight": 1.0,
-      "source": "project_context_changelog",
-      "target": "project_context_june_2026_dependency_upgrade_security_baseline",
+      "source": "project_context_planned_work",
+      "target": "project_context_next_analytics_dashboard",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "project_context_planned_work",
+      "target": "project_context_next_ui_overhaul",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L146",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "project_context_changelog",
+      "target": "project_context_june_2026_first_pass_dependency_upgrade_security_baseline"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L137",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "project_context_changelog",
+      "target": "project_context_june_2026_second_pass_typescript_migration_pnpm"
     },
     {
       "relation": "contains",
@@ -1138,9 +1283,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_url_shortener",
-      "confidence_score": 1.0
+      "target": "readme_url_shortener"
     },
     {
       "relation": "contains",
@@ -1148,9 +1293,9 @@
       "source_file": "README.md",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_url_shortener",
-      "target": "readme_api",
-      "confidence_score": 1.0
+      "target": "readme_api"
     },
     {
       "relation": "contains",
@@ -1158,9 +1303,9 @@
       "source_file": "README.md",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_url_shortener",
-      "target": "readme_environment_variables",
-      "confidence_score": 1.0
+      "target": "readme_environment_variables"
     },
     {
       "relation": "contains",
@@ -1168,8 +1313,18 @@
       "source_file": "README.md",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_url_shortener",
-      "target": "readme_notes",
+      "target": "readme_notes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "readme_url_shortener",
+      "target": "readme_roadmap",
       "confidence_score": 1.0
     },
     {
@@ -1178,9 +1333,9 @@
       "source_file": "README.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_url_shortener",
-      "target": "readme_setup",
-      "confidence_score": 1.0
+      "target": "readme_setup"
     },
     {
       "relation": "contains",
@@ -1188,172 +1343,9 @@
       "source_file": "README.md",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_url_shortener",
-      "target": "readme_stack",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/settings.local.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_settings_local",
-      "target": "claude_settings_local_permissions"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/settings.local.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_settings_local_permissions",
-      "target": "claude_settings_local_permissions_allow"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "config/db.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "config_db",
-      "target": "config_db_connectdb"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "config/db.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "config_db",
-      "target": "config_db_mongoose"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "index.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "index",
-      "target": "config_db"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "INFERRED",
-      "confidence_score": 0.75,
-      "source_file": "config/db.js",
-      "source_location": null,
-      "weight": 0.75,
-      "source": "config_db_connectdb",
-      "target": "models_url_urlschema"
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "index.js",
-      "source_location": "8",
-      "weight": 1.0,
-      "source": "index_app",
-      "target": "config_db_connectdb"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "index.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "index",
-      "target": "index_app"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "index.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "index",
-      "target": "index_connectdb"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "index.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "index",
-      "target": "index_express"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "index.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "index",
-      "target": "index_path"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "models/url.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "models_url",
-      "target": "models_url_mongoose"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "models/url.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "models_url",
-      "target": "models_url_urlschema"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/index.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_index",
-      "target": "models_url"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_url",
-      "target": "models_url"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "models/url.js",
-      "source_location": "10",
-      "weight": 1.0,
-      "source": "models_url_urlmodel",
-      "target": "models_url_urlschema"
+      "target": "readme_stack"
     },
     {
       "relation": "contains",
@@ -1429,6 +1421,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_pnpm"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
       "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -1449,6 +1451,26 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_build"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_dev"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
       "source_location": "L7",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -1464,6 +1486,16 @@
       "confidence_score": 1.0,
       "source": "package_scripts",
       "target": "package_scripts_test"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_pnpm",
+      "target": "package_pnpm_onlybuiltdependencies"
     },
     {
       "relation": "contains",
@@ -1509,21 +1541,178 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L26",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_nodemon"
+      "target": "package_devdependencies_tsx"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_express"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_node"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_typescript"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "config/db.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "config_db",
+      "target": "config_db_connectdb"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_index",
+      "target": "config_db"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "config/db.js",
+      "source_location": null,
+      "weight": 0.75,
+      "source": "config_db_connectdb",
+      "target": "models_url_urlschema"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_index",
+      "target": "routes_index"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_index",
+      "target": "routes_url"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_index",
+      "target": "src_index_app"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/models/url.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "models_url",
+      "target": "models_url_iurl"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/models/url.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "models_url",
+      "target": "models_url_url"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models/url.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "models_url",
+      "target": "models_url_urlschema"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "routes/index.js",
-      "source_location": "L1",
+      "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "routes_index",
-      "target": "routes_index_express"
+      "target": "models_url"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_url",
+      "target": "models_url"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/routes/index.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_index",
+      "target": "models_url_url"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/routes/url.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_url",
+      "target": "models_url_url"
     },
     {
       "relation": "contains",
@@ -1534,26 +1723,6 @@
       "confidence_score": 1.0,
       "source": "routes_index",
       "target": "routes_index_router"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/index.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_index",
-      "target": "routes_index_url"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_url",
-      "target": "routes_url_express"
     },
     {
       "relation": "contains",
@@ -1579,16 +1748,6 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "routes/url.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_url",
-      "target": "routes_url_path"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
       "source_location": "L2",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -1598,62 +1757,142 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_compileroptions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_exclude"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_include"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_esmoduleinterop"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_forceconsistentcasinginfilenames"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
       "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "routes_url",
-      "target": "routes_url_url"
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_module"
     },
     {
-      "relation": "calls",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "routes/url.js",
-      "source_location": "21-25",
+      "source_file": "tsconfig.json",
+      "source_location": "L5",
       "weight": 1.0,
-      "source": "routes_url_shorten_post",
-      "target": "routes_url_isvalidurl"
+      "confidence_score": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_moduleresolution"
     },
     {
-      "relation": "calls",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "routes/index.js",
-      "source_location": "8",
+      "source_file": "tsconfig.json",
+      "source_location": "L6",
       "weight": 1.0,
-      "source": "routes_index_redirect_handler",
-      "target": "models_url_urlmodel"
+      "confidence_score": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_outdir"
     },
     {
-      "relation": "calls",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "routes/url.js",
-      "source_location": "40-41",
+      "source_file": "tsconfig.json",
+      "source_location": "L7",
       "weight": 1.0,
-      "source": "routes_url_savewithcode",
-      "target": "models_url_urlmodel"
+      "confidence_score": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_rootdir"
     },
     {
-      "relation": "calls",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "routes/url.js",
-      "source_location": "30",
+      "source_file": "tsconfig.json",
+      "source_location": "L10",
       "weight": 1.0,
-      "source": "routes_url_shorten_post",
-      "target": "models_url_urlmodel"
+      "confidence_score": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_skiplibcheck"
     },
     {
-      "relation": "calls",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "routes/url.js",
-      "source_location": "45-48",
+      "source_file": "tsconfig.json",
+      "source_location": "L8",
       "weight": 1.0,
-      "source": "routes_url_shorten_post",
-      "target": "routes_url_savewithcode"
+      "confidence_score": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_strict"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_target"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_settings_local",
+      "target": "claude_settings_local_permissions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_settings_local_permissions",
+      "target": "claude_settings_local_permissions_allow"
     }
   ],
   "hyperedges": [
@@ -1697,5 +1936,5 @@
       "source_file": "index.js"
     }
   ],
-  "built_at_commit": "957b0fc2492db18530443817be148c03e5398b32"
+  "built_at_commit": "6a3cf13502e2f6a3bcc2ae31af12ff0b035d4c81"
 }
