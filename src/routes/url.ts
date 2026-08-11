@@ -24,7 +24,7 @@ router.post('/shorten', async (req: Request, res: Response) => {
   const baseUrl = process.env.BASE_URL;
 
   if (!baseUrl || !isValidUrl(baseUrl)) {
-    return res.status(400).json('Invalid base url');
+    return res.status(500).json('Server misconfigured: invalid BASE_URL');
   }
 
   if (!isValidUrl(longUrl)) {
@@ -35,7 +35,7 @@ router.post('/shorten', async (req: Request, res: Response) => {
     const existing = await Url.findOne({ longUrl });
 
     if (existing) {
-      return res.json(existing);
+      return res.status(200).json(existing);
     }
 
     const nanoid = await nanoidPromise;
@@ -57,7 +57,7 @@ router.post('/shorten', async (req: Request, res: Response) => {
       }
     }
 
-    return res.json(url);
+    return res.status(201).json(url);
   } catch (err) {
     console.error(err);
     return res.status(500).json('Server error');

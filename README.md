@@ -1,5 +1,8 @@
 # URL Shortener
 
+<!-- version: v1.0.0 -->
+![Version](https://img.shields.io/badge/version-v1.0.0-blue)
+
 A Node.js URL shortener backed by MongoDB. Submit a long URL, get a short code back, paste the short link anywhere — it redirects to the original.
 
 Built with Express 5, Mongoose 8, TypeScript strict mode, and pnpm. The API is intentionally minimal — a React UI and analytics dashboard are planned next.
@@ -64,6 +67,8 @@ pnpm start   # runs dist/index.js
 - Short codes are unique at the DB layer (index on `urlCode`). Collisions trigger a single retry.
 - Duplicate long URLs return the same short code without creating a new record.
 - No auth, no rate limiting, no analytics yet.
+
+## Changelog
 
 ## Roadmap
 
