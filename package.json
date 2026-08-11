@@ -12,11 +12,6 @@
   },
   "author": "VPK",
   "license": "ISC",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
-  },
   "dependencies": {
     "dotenv": "^16.0.0",
     "express": "^5.0.0",
