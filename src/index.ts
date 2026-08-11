@@ -2,6 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import path from 'path';
 import connectDB from './config/db';
+import { requestId } from './middleware/requestId';
 import indexRouter from './routes/index';
 import urlRouter from './routes/url';
 
@@ -9,6 +10,7 @@ const app = express();
 
 connectDB();
 
+app.use(requestId);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/public', express.static(path.join(__dirname, '..', 'public')));

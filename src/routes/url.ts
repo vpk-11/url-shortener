@@ -1,6 +1,7 @@
 import express, { Request, Response, Router } from 'express';
 import path from 'path';
 import { Url } from '../models/url';
+import { sendError } from '../lib/errors';
 
 const router: Router = express.Router();
 
@@ -24,25 +25,28 @@ router.post('/shorten', async (req: Request, res: Response) => {
   const baseUrl = process.env.BASE_URL;
 
   if (!baseUrl || !isValidUrl(baseUrl)) {
-    return res.status(500).json('Server misconfigured: invalid BASE_URL');
+    return sendError(req, res, 500, 'SERVER_MISCONFIGURED', 'Invalid BASE_URL');
   }
 
   if (!isValidUrl(longUrl)) {
-    return res.status(400).json('Invalid long url');
+    return sendError(req, res, 400, 'VALIDATION_FAILED', 'longUrl is not a valid http(s) URL', 'longUrl');
   }
 
   try {
     const existing = await Url.findOne({ longUrl });
 
     if (existing) {
-      return res.status(200).json(existing);
+      return res.status(200).json({
+        urlCode: existing.urlCode,
+        longUrl: existing.longUrl,
+        shortUrl: `${baseUrl}/${existing.urlCode}`,
+      });
     }
 
     const nanoid = await nanoidPromise;
 
     const saveWithCode = async (code: string) => {
-      const shortUrl = `${baseUrl}/${code}`;
-      const doc = new Url({ longUrl, shortUrl, urlCode: code, date: new Date() });
+      const doc = new Url({ longUrl, urlCode: code });
       return doc.save();
     };
 
@@ -57,10 +61,14 @@ router.post('/shorten', async (req: Request, res: Response) => {
       }
     }
 
-    return res.status(201).json(url);
+    return res.status(201).json({
+      urlCode: url.urlCode,
+      longUrl: url.longUrl,
+      shortUrl: `${baseUrl}/${url.urlCode}`,
+    });
   } catch (err) {
     console.error(err);
-    return res.status(500).json('Server error');
+    return sendError(req, res, 500, 'INTERNAL_ERROR', 'Server error');
   }
 });
 
