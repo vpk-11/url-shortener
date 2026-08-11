@@ -4,10 +4,17 @@
 /dist
 package-lock.json
 
+# Local project context docs -- never commit
+*PROJECT_CONTEXT.md
+.claude/
+.codex/
+
 # Graphify runtime files (machine-local, break on clone)
 graphify-out/manifest.json
 graphify-out/cost.json
 graphify-out/.graphify_python
 graphify-out/.graphify_root
 # dated snapshot dirs created by graphify 0.8.x hook
-graphify-out/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/graphify-out/cache/
+graphify-out/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
+# cache holds absolute machine-local paths (stat-index.json) + AST blobs — not portable, not needed by consumers of the graph
+graphify-out/cache/
