@@ -1,6 +1,7 @@
 import express, { Request, Response, Router } from 'express';
 import { Url } from '../models/url';
 import { LruCache } from '../lib/cache';
+import { sendError } from '../lib/errors';
 
 const router: Router = express.Router();
 
@@ -25,10 +26,10 @@ router.get('/:code', async (req: Request, res: Response) => {
       return res.redirect(301, url.longUrl);
     }
 
-    return res.status(404).json('No url found');
+    return sendError(req, res, 404, 'NOT_FOUND', 'No url found for this code');
   } catch (err) {
     console.error(err);
-    return res.status(500).json('Server error');
+    return sendError(req, res, 500, 'INTERNAL_ERROR', 'Server error');
   }
 });
 
