@@ -69,7 +69,7 @@
       "label": "Setup",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L7",
+      "source_location": "L10",
       "_origin": "ast",
       "id": "readme_setup",
       "community": 7,
@@ -79,7 +79,7 @@
       "label": "Environment Variables",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L32",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "readme_environment_variables",
       "community": 7,
@@ -89,7 +89,7 @@
       "label": "API",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L40",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "readme_api",
       "community": 7,
@@ -99,7 +99,7 @@
       "label": "Stack",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L50",
+      "source_location": "L53",
       "_origin": "ast",
       "id": "readme_stack",
       "community": 7,
@@ -109,101 +109,81 @@
       "label": "Notes",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L61",
+      "source_location": "L64",
       "_origin": "ast",
       "id": "readme_notes",
       "community": 7,
       "norm_label": "notes"
     },
     {
+      "label": "Changelog",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "readme_changelog",
+      "community": 7,
+      "norm_label": "changelog"
+    },
+    {
       "label": "Roadmap",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L68",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "readme_roadmap",
       "community": 7,
       "norm_label": "roadmap"
     },
     {
-      "label": "db.ts",
+      "label": "cache.ts",
       "file_type": "code",
-      "source_file": "src/config/db.ts",
+      "source_file": "src/lib/cache.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "config_db",
-      "community": 3,
-      "norm_label": "db.ts"
+      "id": "lib_cache",
+      "community": 8,
+      "norm_label": "cache.ts"
     },
     {
-      "label": "connectDB()",
+      "label": "LruCache",
       "file_type": "code",
-      "source_file": "src/config/db.ts",
-      "source_location": "L3",
+      "source_file": "src/lib/cache.ts",
+      "source_location": "L5",
       "_origin": "ast",
-      "id": "config_db_connectdb",
-      "community": 3,
-      "norm_label": "connectdb()"
+      "id": "lib_cache_lrucache",
+      "community": 8,
+      "norm_label": "lrucache"
     },
     {
-      "label": "index.ts",
+      "label": ".constructor()",
       "file_type": "code",
-      "source_file": "src/index.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_index",
-      "community": 3,
-      "norm_label": "index.ts"
-    },
-    {
-      "label": "app",
-      "file_type": "code",
-      "source_file": "src/index.ts",
+      "source_file": "src/lib/cache.ts",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "src_index_app",
-      "community": 3,
-      "norm_label": "app"
+      "id": "lib_cache_lrucache_constructor",
+      "community": 8,
+      "norm_label": ".constructor()"
     },
     {
-      "label": "url.ts",
+      "label": ".get()",
       "file_type": "code",
-      "source_file": "src/models/url.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "models_url",
-      "community": 3,
-      "norm_label": "url.ts"
-    },
-    {
-      "label": "IUrl",
-      "file_type": "code",
-      "source_file": "src/models/url.ts",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "models_url_iurl",
-      "community": 3,
-      "norm_label": "iurl"
-    },
-    {
-      "label": "urlSchema",
-      "file_type": "code",
-      "source_file": "src/models/url.ts",
+      "source_file": "src/lib/cache.ts",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "models_url_urlschema",
-      "community": 3,
-      "norm_label": "urlschema"
+      "id": "lib_cache_lrucache_get",
+      "community": 8,
+      "norm_label": ".get()"
     },
     {
-      "label": "Url",
+      "label": ".set()",
       "file_type": "code",
-      "source_file": "src/models/url.ts",
-      "source_location": "L17",
+      "source_file": "src/lib/cache.ts",
+      "source_location": "L18",
       "_origin": "ast",
-      "id": "models_url_url",
-      "community": 3,
-      "norm_label": "url"
+      "id": "lib_cache_lrucache_set",
+      "community": 8,
+      "norm_label": ".set()"
     },
     {
       "label": "index.ts",
@@ -219,11 +199,21 @@
       "label": "router",
       "file_type": "code",
       "source_file": "src/routes/index.ts",
-      "source_location": "L4",
+      "source_location": "L5",
       "_origin": "ast",
       "id": "routes_index_router",
       "community": 3,
       "norm_label": "router"
+    },
+    {
+      "label": "redirectCache",
+      "file_type": "code",
+      "source_file": "src/routes/index.ts",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "routes_index_redirectcache",
+      "community": 3,
+      "norm_label": "redirectcache"
     },
     {
       "label": "url.ts",
@@ -266,14 +256,94 @@
       "norm_label": "isvalidurl()"
     },
     {
+      "label": "db.ts",
+      "file_type": "code",
+      "source_file": "src/config/db.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "db.ts",
+      "id": "config_db"
+    },
+    {
+      "label": "connectDB()",
+      "file_type": "code",
+      "source_file": "src/config/db.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "connectdb()",
+      "id": "config_db_connectdb"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/index.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "index.ts",
+      "id": "src_index"
+    },
+    {
+      "label": "app",
+      "file_type": "code",
+      "source_file": "src/index.ts",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "app",
+      "id": "src_index_app"
+    },
+    {
+      "label": "url.ts",
+      "file_type": "code",
+      "source_file": "src/models/url.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "url.ts",
+      "id": "models_url"
+    },
+    {
+      "label": "IUrl",
+      "file_type": "code",
+      "source_file": "src/models/url.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "iurl",
+      "id": "models_url_iurl"
+    },
+    {
+      "label": "urlSchema",
+      "file_type": "code",
+      "source_file": "src/models/url.ts",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "urlschema",
+      "id": "models_url_urlschema"
+    },
+    {
+      "label": "Url",
+      "file_type": "code",
+      "source_file": "src/models/url.ts",
+      "source_location": "L17",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "url",
+      "id": "models_url_url"
+    },
+    {
       "label": "tsconfig.json",
       "file_type": "code",
       "source_file": "tsconfig.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "tsconfig",
       "community": 1,
-      "norm_label": "tsconfig.json"
+      "norm_label": "tsconfig.json",
+      "id": "tsconfig"
     },
     {
       "label": "compilerOptions",
@@ -281,9 +351,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions",
       "community": 1,
-      "norm_label": "compileroptions"
+      "norm_label": "compileroptions",
+      "id": "tsconfig_compileroptions"
     },
     {
       "label": "target",
@@ -291,9 +361,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_target",
       "community": 1,
-      "norm_label": "target"
+      "norm_label": "target",
+      "id": "tsconfig_compileroptions_target"
     },
     {
       "label": "module",
@@ -301,9 +371,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_module",
       "community": 1,
-      "norm_label": "module"
+      "norm_label": "module",
+      "id": "tsconfig_compileroptions_module"
     },
     {
       "label": "moduleResolution",
@@ -311,9 +381,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_moduleresolution",
       "community": 1,
-      "norm_label": "moduleresolution"
+      "norm_label": "moduleresolution",
+      "id": "tsconfig_compileroptions_moduleresolution"
     },
     {
       "label": "outDir",
@@ -321,9 +391,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_outdir",
       "community": 1,
-      "norm_label": "outdir"
+      "norm_label": "outdir",
+      "id": "tsconfig_compileroptions_outdir"
     },
     {
       "label": "rootDir",
@@ -331,9 +401,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_rootdir",
       "community": 1,
-      "norm_label": "rootdir"
+      "norm_label": "rootdir",
+      "id": "tsconfig_compileroptions_rootdir"
     },
     {
       "label": "strict",
@@ -341,9 +411,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_strict",
       "community": 1,
-      "norm_label": "strict"
+      "norm_label": "strict",
+      "id": "tsconfig_compileroptions_strict"
     },
     {
       "label": "esModuleInterop",
@@ -351,9 +421,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_esmoduleinterop",
       "community": 1,
-      "norm_label": "esmoduleinterop"
+      "norm_label": "esmoduleinterop",
+      "id": "tsconfig_compileroptions_esmoduleinterop"
     },
     {
       "label": "skipLibCheck",
@@ -361,9 +431,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_skiplibcheck",
       "community": 1,
-      "norm_label": "skiplibcheck"
+      "norm_label": "skiplibcheck",
+      "id": "tsconfig_compileroptions_skiplibcheck"
     },
     {
       "label": "forceConsistentCasingInFileNames",
@@ -371,9 +441,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_forceconsistentcasinginfilenames",
       "community": 1,
-      "norm_label": "forceconsistentcasinginfilenames"
+      "norm_label": "forceconsistentcasinginfilenames",
+      "id": "tsconfig_compileroptions_forceconsistentcasinginfilenames"
     },
     {
       "label": "include",
@@ -381,9 +451,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "tsconfig_include",
       "community": 1,
-      "norm_label": "include"
+      "norm_label": "include",
+      "id": "tsconfig_include"
     },
     {
       "label": "exclude",
@@ -391,9 +461,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "tsconfig_exclude",
       "community": 1,
-      "norm_label": "exclude"
+      "norm_label": "exclude",
+      "id": "tsconfig_exclude"
     },
     {
       "label": "package.json",
@@ -691,6 +761,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "readme_url_shortener",
+      "target": "readme_changelog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
       "source_location": "L25",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -740,6 +820,206 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/lib/cache.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "lib_cache",
+      "target": "lib_cache_lrucache",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/routes/index.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "routes_index",
+      "target": "lib_cache",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/cache.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "lib_cache_lrucache",
+      "target": "lib_cache_lrucache_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/cache.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "lib_cache_lrucache",
+      "target": "lib_cache_lrucache_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/cache.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "lib_cache_lrucache",
+      "target": "lib_cache_lrucache_set",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/routes/index.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "routes_index",
+      "target": "lib_cache_lrucache",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/index.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_index",
+      "target": "models_url"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/routes/index.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_index",
+      "target": "models_url_url"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/routes/index.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "routes_index",
+      "target": "routes_index_redirectcache",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/index.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_index",
+      "target": "routes_index_router"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_index",
+      "target": "routes_index"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_index",
+      "target": "routes_index_router"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_url",
+      "target": "models_url"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/routes/url.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_url",
+      "target": "models_url_url"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_url",
+      "target": "routes_url_isvalidurl"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_url",
+      "target": "routes_url_nanoidpromise"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_url",
+      "target": "routes_url_router"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_index",
+      "target": "routes_url"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_index",
+      "target": "routes_url_router"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "config/db.js",
       "source_location": "L3",
       "weight": 1.0,
@@ -775,53 +1055,9 @@
       "source_file": "src/index.ts",
       "source_location": "L4",
       "weight": 1.0,
-      "source": "src_index",
-      "target": "config_db_connectdb",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/index.ts",
-      "source_location": "L5",
-      "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_index",
-      "target": "routes_index"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/index.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "src_index",
-      "target": "routes_index_router",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/index.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_index",
-      "target": "routes_url"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/index.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "source": "src_index",
-      "target": "routes_url_router",
-      "confidence_score": 1.0
+      "target": "config_db_connectdb"
     },
     {
       "relation": "contains",
@@ -862,90 +1098,6 @@
       "confidence_score": 1.0,
       "source": "models_url",
       "target": "models_url_urlschema"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/index.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_index",
-      "target": "models_url"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_url",
-      "target": "models_url"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/routes/index.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_index",
-      "target": "models_url_url"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/routes/url.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_url",
-      "target": "models_url_url"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/index.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_index",
-      "target": "routes_index_router"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_url",
-      "target": "routes_url_isvalidurl"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_url",
-      "target": "routes_url_nanoidpromise"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_url",
-      "target": "routes_url_router"
     },
     {
       "relation": "contains",
@@ -1359,5 +1511,5 @@
       "source_file": "index.js"
     }
   ],
-  "built_at_commit": "1e1b8bfe78456a1b39eab8a0db7c5d9b84d1cd58"
+  "built_at_commit": "52a434d04772e09f5fb7cf1552458e267b057026"
 }

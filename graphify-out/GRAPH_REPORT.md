@@ -1,16 +1,16 @@
 # Graph Report - url-shortner  (2026-08-11)
 
 ## Corpus Check
-- 8 files · ~965 words
+- 9 files · ~1,679 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 62 nodes · 64 edges · 8 communities (7 shown, 1 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.75)
+- 69 nodes · 72 edges · 9 communities (7 shown, 2 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.75)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1e1b8bfe`
+- Built from commit: `52a434d0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -23,18 +23,19 @@
 - [[_COMMUNITY_Runtime Dependencies|Runtime Dependencies]]
 - [[_COMMUNITY_Claude Code Permissions|Claude Code Permissions]]
 - [[_COMMUNITY_Project Documentation|Project Documentation]]
+- [[_COMMUNITY_Community 8|Community 8]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `compilerOptions` - 10 edges
-2. `URL Shortener` - 7 edges
-3. `scripts` - 5 edges
-4. `connectDB()` - 3 edges
-5. `Url` - 3 edges
-6. `urlSchema` - 2 edges
+2. `URL Shortener` - 8 edges
+3. `LruCache` - 5 edges
+4. `scripts` - 5 edges
+5. `connectDB()` - 3 edges
+6. `Url` - 3 edges
 7. `router` - 2 edges
 8. `router` - 2 edges
-9. `pnpm` - 2 edges
-10. `permissions` - 2 edges
+9. `urlSchema` - 2 edges
+10. `pnpm` - 2 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `connectDB()` --shares_data_with--> `urlSchema`  [INFERRED]
@@ -48,7 +49,7 @@
 - **Short Code Redirect Flow** — routes_index_redirect_handler, models_url_urlmodel, concept_url_deduplication [INFERRED 0.85]
 - **App Bootstrap and DB Connection Flow** — index_app, config_db_connectdb, models_url_urlschema [EXTRACTED 1.00]
 
-## Communities (8 total, 1 thin omitted)
+## Communities (9 total, 2 thin omitted)
 
 ### Community 0 - "Package Metadata"
 Cohesion: 0.22
@@ -63,8 +64,8 @@ Cohesion: 0.40
 Nodes (5): scripts, build, dev, start, test
 
 ### Community 3 - "URL Validation and Code Gen"
-Cohesion: 0.22
-Nodes (8): connectDB(), IUrl, Url, urlSchema, router, nanoidPromise, router, app
+Cohesion: 0.20
+Nodes (9): connectDB(), IUrl, Url, urlSchema, redirectCache, router, nanoidPromise, router (+1 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.40
@@ -75,22 +76,22 @@ Cohesion: 0.40
 Nodes (5): dependencies, dotenv, express, mongoose, nanoid
 
 ### Community 7 - "Project Documentation"
-Cohesion: 0.25
-Nodes (7): API, Environment Variables, Notes, Roadmap, Setup, Stack, URL Shortener
+Cohesion: 0.22
+Nodes (8): API, Changelog, Environment Variables, Notes, Roadmap, Setup, Stack, URL Shortener
 
 ## Knowledge Gaps
-- **40 isolated node(s):** `Setup`, `Environment Variables`, `API`, `Stack`, `Notes` (+35 more)
+- **42 isolated node(s):** `Setup`, `Environment Variables`, `API`, `Stack`, `Notes` (+37 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `scripts` connect `URL Shortening Flow` to `Package Metadata`?**
-  _High betweenness centrality (0.045) - this node is a cross-community bridge._
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `Runtime Dependencies` to `Package Metadata`?**
-  _High betweenness centrality (0.045) - this node is a cross-community bridge._
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `Community 4` to `Package Metadata`?**
-  _High betweenness centrality (0.045) - this node is a cross-community bridge._
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
 - **What connects `Setup`, `Environment Variables`, `API` to the rest of the system?**
-  _40 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _42 weakly-connected nodes found - possible documentation gaps or missing edges._
