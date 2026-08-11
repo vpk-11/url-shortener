@@ -46,16 +46,6 @@
   },
   "nodes": [
     {
-      "label": "eslint.config.mjs",
-      "file_type": "code",
-      "source_file": "eslint.config.mjs",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "eslint_config",
-      "community": 10,
-      "norm_label": "eslint.config.mjs"
-    },
-    {
       "label": "package.json",
       "file_type": "code",
       "source_file": "package.json",
@@ -236,10 +226,20 @@
       "norm_label": "express"
     },
     {
-      "label": "mongoose",
+      "label": "express-rate-limit",
       "file_type": "code",
       "source_file": "package.json",
       "source_location": "L23",
+      "_origin": "ast",
+      "id": "package_dependencies_express_rate_limit",
+      "community": 5,
+      "norm_label": "express-rate-limit"
+    },
+    {
+      "label": "mongoose",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "package_dependencies_mongoose",
       "community": 5,
@@ -249,7 +249,7 @@
       "label": "nanoid",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "package_dependencies_nanoid",
       "community": 5,
@@ -259,7 +259,7 @@
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "package_devdependencies",
       "community": 4,
@@ -269,7 +269,7 @@
       "label": "@types/express",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "package_devdependencies_types_express",
       "community": 4,
@@ -279,7 +279,7 @@
       "label": "@types/node",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "package_devdependencies_types_node",
       "community": 4,
@@ -289,7 +289,7 @@
       "label": "eslint",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "package_devdependencies_eslint",
       "community": 4,
@@ -299,7 +299,7 @@
       "label": "tsx",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "package_devdependencies_tsx",
       "community": 4,
@@ -309,7 +309,7 @@
       "label": "typescript",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "package_devdependencies_typescript",
       "community": 4,
@@ -319,151 +319,11 @@
       "label": "typescript-eslint",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "package_devdependencies_typescript_eslint",
       "community": 4,
       "norm_label": "typescript-eslint"
-    },
-    {
-      "label": "index.ts",
-      "file_type": "code",
-      "source_file": "src/index.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_index",
-      "community": 2,
-      "norm_label": "index.ts"
-    },
-    {
-      "label": "app",
-      "file_type": "code",
-      "source_file": "src/index.ts",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "src_index_app",
-      "community": 2,
-      "norm_label": "app"
-    },
-    {
-      "label": "errors.ts",
-      "file_type": "code",
-      "source_file": "src/lib/errors.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "lib_errors",
-      "community": 3,
-      "norm_label": "errors.ts"
-    },
-    {
-      "label": "sendError()",
-      "file_type": "code",
-      "source_file": "src/lib/errors.ts",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "lib_errors_senderror",
-      "community": 3,
-      "norm_label": "senderror()"
-    },
-    {
-      "label": "requestId.ts",
-      "file_type": "code",
-      "source_file": "src/middleware/requestId.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "middleware_requestid",
-      "community": 2,
-      "norm_label": "requestid.ts"
-    },
-    {
-      "label": "Request",
-      "file_type": "code",
-      "source_file": "src/middleware/requestId.ts",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "middleware_requestid_request",
-      "community": 2,
-      "norm_label": "request"
-    },
-    {
-      "label": "requestId()",
-      "file_type": "code",
-      "source_file": "src/middleware/requestId.ts",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "middleware_requestid_requestid",
-      "community": 2,
-      "norm_label": "requestid()"
-    },
-    {
-      "label": "url.ts",
-      "file_type": "code",
-      "source_file": "src/models/url.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "models_url",
-      "community": 3,
-      "norm_label": "url.ts"
-    },
-    {
-      "label": "IUrl",
-      "file_type": "code",
-      "source_file": "src/models/url.ts",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "models_url_iurl",
-      "community": 3,
-      "norm_label": "iurl"
-    },
-    {
-      "label": "urlSchema",
-      "file_type": "code",
-      "source_file": "src/models/url.ts",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "models_url_urlschema",
-      "community": 3,
-      "norm_label": "urlschema"
-    },
-    {
-      "label": "Url",
-      "file_type": "code",
-      "source_file": "src/models/url.ts",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "models_url_url",
-      "community": 3,
-      "norm_label": "url"
-    },
-    {
-      "label": "index.ts",
-      "file_type": "code",
-      "source_file": "src/routes/index.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "routes_index",
-      "community": 3,
-      "norm_label": "index.ts"
-    },
-    {
-      "label": "router",
-      "file_type": "code",
-      "source_file": "src/routes/index.ts",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "routes_index_router",
-      "community": 3,
-      "norm_label": "router"
-    },
-    {
-      "label": "redirectCache",
-      "file_type": "code",
-      "source_file": "src/routes/index.ts",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "routes_index_redirectcache",
-      "community": 3,
-      "norm_label": "redirectcache"
     },
     {
       "label": "url.ts",
@@ -479,7 +339,7 @@
       "label": "router",
       "file_type": "code",
       "source_file": "src/routes/url.ts",
-      "source_location": "L6",
+      "source_location": "L7",
       "_origin": "ast",
       "id": "routes_url_router",
       "community": 3,
@@ -489,21 +349,181 @@
       "label": "nanoidPromise",
       "file_type": "code",
       "source_file": "src/routes/url.ts",
-      "source_location": "L8",
+      "source_location": "L9",
       "_origin": "ast",
       "id": "routes_url_nanoidpromise",
       "community": 3,
       "norm_label": "nanoidpromise"
     },
     {
-      "label": "isValidUrl()",
+      "label": "shortenLimiter",
       "file_type": "code",
       "source_file": "src/routes/url.ts",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "routes_url_shortenlimiter",
+      "community": 3,
+      "norm_label": "shortenlimiter"
+    },
+    {
+      "label": "normalizeUrl()",
+      "file_type": "code",
+      "source_file": "src/routes/url.ts",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "routes_url_normalizeurl",
+      "community": 3,
+      "norm_label": "normalizeurl()"
+    },
+    {
+      "label": "eslint.config.mjs",
+      "file_type": "code",
+      "source_file": "eslint.config.mjs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 10,
+      "norm_label": "eslint.config.mjs",
+      "id": "eslint_config"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/index.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "index.ts",
+      "id": "src_index"
+    },
+    {
+      "label": "app",
+      "file_type": "code",
+      "source_file": "src/index.ts",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "app",
+      "id": "src_index_app"
+    },
+    {
+      "label": "errors.ts",
+      "file_type": "code",
+      "source_file": "src/lib/errors.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "errors.ts",
+      "id": "lib_errors"
+    },
+    {
+      "label": "sendError()",
+      "file_type": "code",
+      "source_file": "src/lib/errors.ts",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "senderror()",
+      "id": "lib_errors_senderror"
+    },
+    {
+      "label": "requestId.ts",
+      "file_type": "code",
+      "source_file": "src/middleware/requestId.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "requestid.ts",
+      "id": "middleware_requestid"
+    },
+    {
+      "label": "Request",
+      "file_type": "code",
+      "source_file": "src/middleware/requestId.ts",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "request",
+      "id": "middleware_requestid_request"
+    },
+    {
+      "label": "requestId()",
+      "file_type": "code",
+      "source_file": "src/middleware/requestId.ts",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "requestid()",
+      "id": "middleware_requestid_requestid"
+    },
+    {
+      "label": "url.ts",
+      "file_type": "code",
+      "source_file": "src/models/url.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "url.ts",
+      "id": "models_url"
+    },
+    {
+      "label": "IUrl",
+      "file_type": "code",
+      "source_file": "src/models/url.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "iurl",
+      "id": "models_url_iurl"
+    },
+    {
+      "label": "urlSchema",
+      "file_type": "code",
+      "source_file": "src/models/url.ts",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "urlschema",
+      "id": "models_url_urlschema"
+    },
+    {
+      "label": "Url",
+      "file_type": "code",
+      "source_file": "src/models/url.ts",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "url",
+      "id": "models_url_url"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/routes/index.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "index.ts",
+      "id": "routes_index"
+    },
+    {
+      "label": "router",
+      "file_type": "code",
+      "source_file": "src/routes/index.ts",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "router",
+      "id": "routes_index_router"
+    },
+    {
+      "label": "redirectCache",
+      "file_type": "code",
+      "source_file": "src/routes/index.ts",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "routes_url_isvalidurl",
       "community": 3,
-      "norm_label": "isvalidurl()"
+      "norm_label": "redirectcache",
+      "id": "routes_index_redirectcache"
     },
     {
       "label": "cache.test.ts",
@@ -963,9 +983,9 @@
       "source_file": "package.json",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_scripts",
-      "target": "package_scripts_lint",
-      "confidence_score": 1.0
+      "target": "package_scripts_lint"
     },
     {
       "relation": "contains",
@@ -1021,6 +1041,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_express_rate_limit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
       "source_location": "L15",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -1043,9 +1073,9 @@
       "source_file": "package.json",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint",
-      "confidence_score": 1.0
+      "target": "package_devdependencies_eslint"
     },
     {
       "relation": "contains",
@@ -1093,9 +1123,115 @@
       "source_file": "package.json",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_typescript_eslint",
+      "target": "package_devdependencies_typescript_eslint"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/routes/url.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_url",
+      "target": "lib_errors"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/routes/url.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_url",
+      "target": "lib_errors_senderror"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_url",
+      "target": "models_url"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/routes/url.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_url",
+      "target": "models_url_url"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_url",
+      "target": "routes_url_nanoidpromise"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/routes/url.ts",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "routes_url",
+      "target": "routes_url_normalizeurl",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/url.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_url",
+      "target": "routes_url_router"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/routes/url.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "routes_url",
+      "target": "routes_url_shortenlimiter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_index",
+      "target": "routes_url"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_index",
+      "target": "routes_url_router"
     },
     {
       "relation": "imports_from",
@@ -1126,9 +1262,9 @@
       "source_file": "src/index.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_index",
-      "target": "middleware_requestid",
-      "confidence_score": 1.0
+      "target": "middleware_requestid"
     },
     {
       "relation": "imports",
@@ -1137,9 +1273,9 @@
       "source_file": "src/index.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_index",
-      "target": "middleware_requestid_requestid",
-      "confidence_score": 1.0
+      "target": "middleware_requestid_requestid"
     },
     {
       "relation": "imports_from",
@@ -1164,28 +1300,6 @@
       "target": "routes_index_router"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/index.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_index",
-      "target": "routes_url"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/index.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_index",
-      "target": "routes_url_router"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/index.ts",
@@ -1201,9 +1315,9 @@
       "source_file": "src/lib/errors.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_errors",
-      "target": "lib_errors_senderror",
-      "confidence_score": 1.0
+      "target": "lib_errors_senderror"
     },
     {
       "relation": "imports_from",
@@ -1212,20 +1326,9 @@
       "source_file": "src/routes/index.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "routes_index",
-      "target": "lib_errors",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/routes/url.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "routes_url",
-      "target": "lib_errors",
-      "confidence_score": 1.0
+      "target": "lib_errors"
     },
     {
       "relation": "imports",
@@ -1234,20 +1337,9 @@
       "source_file": "src/routes/index.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "routes_index",
-      "target": "lib_errors_senderror",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/routes/url.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "routes_url",
-      "target": "lib_errors_senderror",
-      "confidence_score": 1.0
+      "target": "lib_errors_senderror"
     },
     {
       "relation": "contains",
@@ -1255,9 +1347,9 @@
       "source_file": "src/middleware/requestId.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middleware_requestid",
-      "target": "middleware_requestid_request",
-      "confidence_score": 1.0
+      "target": "middleware_requestid_request"
     },
     {
       "relation": "contains",
@@ -1265,9 +1357,9 @@
       "source_file": "src/middleware/requestId.ts",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middleware_requestid",
-      "target": "middleware_requestid_requestid",
-      "confidence_score": 1.0
+      "target": "middleware_requestid_requestid"
     },
     {
       "relation": "contains",
@@ -1311,17 +1403,6 @@
       "target": "models_url"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_url",
-      "target": "models_url"
-    },
-    {
       "relation": "shares_data_with",
       "confidence": "INFERRED",
       "confidence_score": 0.75,
@@ -1340,17 +1421,6 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "routes_index",
-      "target": "models_url_url"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/routes/url.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_url",
       "target": "models_url_url"
     },
     {
@@ -1394,36 +1464,6 @@
       "confidence_score": 1.0,
       "source": "routes_index",
       "target": "routes_index_router"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_url",
-      "target": "routes_url_isvalidurl"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_url",
-      "target": "routes_url_nanoidpromise"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/url.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_url",
-      "target": "routes_url_router"
     },
     {
       "relation": "imports",
@@ -1748,5 +1788,5 @@
       "source_file": "index.js"
     }
   ],
-  "built_at_commit": "b8e834ce35cbe0076527dc196051e1467d93fc6a"
+  "built_at_commit": "8452505ff3817386a021d568f12b1d2187810759"
 }
