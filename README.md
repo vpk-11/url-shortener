@@ -1,7 +1,7 @@
 # URL Shortener
 
-<!-- version: v1.3.0 -->
-![Version](https://img.shields.io/badge/version-v1.3.0-blue)
+<!-- version: v1.4.0 -->
+![Version](https://img.shields.io/badge/version-v1.4.0-blue)
 
 A Node.js URL shortener backed by MongoDB. Submit a long URL, get a short code back, paste the short link anywhere — it redirects to the original.
 
@@ -69,6 +69,7 @@ pnpm start   # runs dist/index.js
 - No auth, no rate limiting, no analytics yet.
 
 ## Changelog
+- **v1.4.0** (2026-11-18): minor bump
 - **v1.3.0** (2026-11-18): minor bump
 - **v1.2.0** (2026-11-18): minor bump
 - **v1.1.4** (2026-09-28): patch bump
